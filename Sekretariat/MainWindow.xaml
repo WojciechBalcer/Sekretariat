@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <DockPanel>
+            <TabControl>
+                <TabItem Header="Dodaj ucznia"></TabItem>
+                <TabItem Header="Dodaj nauczyciela"></TabItem>
+                <TabItem Header="Dodaj pracownika"></TabItem>
+            </TabControl>
+        </DockPanel>
     </Grid>
 </Window>
