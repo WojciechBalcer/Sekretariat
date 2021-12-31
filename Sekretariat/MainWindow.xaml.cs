@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Sekretariat
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -25,4 +22,9 @@ namespace Sekretariat
             InitializeComponent();
         }
     }
+    
 }
+//pozniej moze mi sie przydac
+/*<StackPanel VerticalAlignment = "Center" HorizontalAlignment="Center">
+                <Button Name = "zakoncz" Click="zakoncz_Click">zakoncz</Button>
+            </StackPanel>*/

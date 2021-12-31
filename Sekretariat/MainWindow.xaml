@@ -5,11 +5,69 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sekretariat"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="1000">
     <Grid>
         <DockPanel>
-            <TabControl>
-                <TabItem Header="Dodaj ucznia"></TabItem>
+
+            <TabControl Name="tabCtr">
+                <TabItem Header="Dodaj ucznia">
+                    <Grid>
+                        <Grid ShowGridLines="True">
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="0*"></ColumnDefinition>
+                                <ColumnDefinition Width="3*"></ColumnDefinition>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                <ColumnDefinition Width="3*"></ColumnDefinition>
+                                <ColumnDefinition Width="3*"></ColumnDefinition>
+                                <ColumnDefinition Width="3*"></ColumnDefinition>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="6*"></ColumnDefinition>
+                                <ColumnDefinition Width="6*"></ColumnDefinition>
+                                <ColumnDefinition Width="6*"></ColumnDefinition>
+                                <ColumnDefinition Width="6*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"></RowDefinition>
+                                <RowDefinition Height="1*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Column="1">Imię</Label>
+                            <TextBox Grid.Row="2" Grid.Column="1" Name="imie"></TextBox>
+                            <Label Grid.Column="2">Drugie imię</Label>
+                            <TextBox Grid.Row="2" Grid.Column="2" Name="drugieImie"></TextBox>
+                            <Label Grid.Column="3">Nazwisko</Label>
+                            <TextBox Grid.Row="2" Grid.Column="3" Name="nazwisko"></TextBox>
+                            <Label Grid.Column="4">Nazwisko panieńskie</Label>
+                            <TextBox Grid.Row="2" Grid.Column="4" Name="nazwiskoPanienskie"></TextBox>
+                            <Label Grid.Column="5">Imiona rodziców</Label>
+                            <TextBox Grid.Row="2" Grid.Column="5" Name="imonaRodzicow"></TextBox>
+                            <Label Grid.Column="6">Data urodzenia</Label>
+                            <TextBox Grid.Row="2" Grid.Column="6" Name="dataUrodzenia"></TextBox>
+                            <Label Grid.Column="7">Pesel</Label>
+                            <TextBox Grid.Row="2" Grid.Column="7" Name="pesel"></TextBox>
+                            <Label Grid.Column="8">Zdjęcie</Label>
+                            <TextBox Grid.Row="2" Grid.Column="8" Name="zdjecie"></TextBox>
+                            <Label Grid.Column="9">Płeć</Label>
+                            <TextBox Grid.Row="2" Grid.Column="9" Name="plec"></TextBox>
+                            <Label Grid.Column="10">Przynależność do klasy</Label>
+                            <TextBox Grid.Row="2" Grid.Column="10" Name="doKlasy"></TextBox>
+                            <Label Grid.Column="11">Przynoależność do grup</Label>
+                            <TextBox Grid.Row="2" Grid.Column="11" Name="doGrupy"></TextBox>
+                            <Button Click="dodaj_ucznia_Click" Grid.Column="13" Grid.Row="1">dodaj ucznia</Button>
+                            <Button Click="wyczysc_ucz_Click"  Grid.Column="12" Grid.Row="1">Wyczyść</Button>
+                        </Grid>
+
+                    </Grid>
+
+
+                </TabItem>
+
+
+
+
                 <TabItem Header="Dodaj nauczyciela"></TabItem>
                 <TabItem Header="Dodaj pracownika"></TabItem>
             </TabControl>
