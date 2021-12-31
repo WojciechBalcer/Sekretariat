@@ -144,7 +144,6 @@
                                 <ColumnDefinition Width="6*"></ColumnDefinition>
                                 <ColumnDefinition Width="7*"></ColumnDefinition>
                                 <ColumnDefinition Width="6*"></ColumnDefinition>
-                                <ColumnDefinition Width="6*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="1*"></RowDefinition>
