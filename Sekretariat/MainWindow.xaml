@@ -124,7 +124,62 @@
 
                     </Grid>
                 </TabItem>
-                <TabItem Header="Dodaj pracownika"></TabItem>
+                <TabItem Header="Dodaj pracownika">
+                    <Grid>
+                        <Grid ShowGridLines="True">
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="0*"></ColumnDefinition>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                <ColumnDefinition Width="5*"></ColumnDefinition>
+                                <ColumnDefinition Width="3*"></ColumnDefinition>
+                                <ColumnDefinition Width="6*"></ColumnDefinition>
+                                <ColumnDefinition Width="6*"></ColumnDefinition>
+                                <ColumnDefinition Width="5*"></ColumnDefinition>
+                                <ColumnDefinition Width="3*"></ColumnDefinition>
+                                <ColumnDefinition Width="3*"></ColumnDefinition>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                <ColumnDefinition Width="6*"></ColumnDefinition>
+                                <ColumnDefinition Width="8*"></ColumnDefinition>
+                                <ColumnDefinition Width="6*"></ColumnDefinition>
+                                <ColumnDefinition Width="7*"></ColumnDefinition>
+                                <ColumnDefinition Width="6*"></ColumnDefinition>
+                                <ColumnDefinition Width="6*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"></RowDefinition>
+                                <RowDefinition Height="1*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Column="1">Imię</Label>
+                            <TextBox Grid.Row="2" Grid.Column="1" Name="imieP"></TextBox>
+                            <Label Grid.Column="2">Drugie imię</Label>
+                            <TextBox Grid.Row="2" Grid.Column="2" Name="drugieImieP"></TextBox>
+                            <Label Grid.Column="3">Nazwisko</Label>
+                            <TextBox Grid.Row="2" Grid.Column="3" Name="nazwiskoP"></TextBox>
+                            <Label Grid.Column="4">Nazwisko panieńskie</Label>
+                            <TextBox Grid.Row="2" Grid.Column="4" Name="nazwiskoPanienskieP"></TextBox>
+                            <Label Grid.Column="5">Imiona rodziców</Label>
+                            <TextBox Grid.Row="2" Grid.Column="5" Name="imonaRodzicowP"></TextBox>
+                            <Label Grid.Column="6">Data urodzenia</Label>
+                            <TextBox Grid.Row="2" Grid.Column="6" Name="dataUrodzeniaP"></TextBox>
+                            <Label Grid.Column="7">Pesel</Label>
+                            <TextBox Grid.Row="2" Grid.Column="7" Name="peselP"></TextBox>
+                            <Label Grid.Column="8">Zdjęcie</Label>
+                            <TextBox Grid.Row="2" Grid.Column="8" Name="zdjecieP"></TextBox>
+                            <Label Grid.Column="9">Płeć</Label>
+                            <TextBox Grid.Row="2" Grid.Column="9" Name="plecP"></TextBox>
+                            <Label Grid.Column="10">Informacje o etacie</Label>
+                            <TextBox Grid.Row="2" Grid.Column="10" Name="etat"></TextBox>
+                            <Label Grid.Column="11">Opis stanowiska</Label>
+                            <TextBox Grid.Row="2" Grid.Column="11" Name="Opis"></TextBox>
+                            <Label Grid.Column="12">Klasy uczone</Label>
+                            <TextBox Grid.Row="2" Grid.Column="12" Name="DataZatrudnienaP"></TextBox>
+                            <Button Grid.Column="14" Grid.Row="1">dodaj ucznia</Button>
+                            <Button Grid.Column="13" Grid.Row="1">Wyczyść</Button>
+                        </Grid>
+
+                    </Grid>
+                </TabItem>
             </TabControl>
         </DockPanel>
     </Grid>
