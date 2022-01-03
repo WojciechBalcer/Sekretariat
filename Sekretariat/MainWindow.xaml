@@ -57,8 +57,8 @@
                                 <TextBox Grid.Row="2" Grid.Column="10" Name="doKlasyU"></TextBox>
                                 <Label Grid.Column="11">Przynoależność do grup</Label>
                                 <TextBox Grid.Row="2" Grid.Column="11" Name="doGrupyU"></TextBox>
-                                <Button Grid.Column="13" Grid.Row="1">dodaj ucznia</Button>
-                                <Button Grid.Column="12" Grid.Row="1">Wyczyść</Button>
+                                <Button Grid.Column="13" Grid.Row="1" Click="dodajUcznia">dodaj ucznia</Button>
+                                <Button Grid.Column="12" Grid.Row="1" Name="wyczyscUcznia">Wyczyść</Button>
                             </Grid>
 
                         </Grid>
@@ -119,8 +119,8 @@
                                 <TextBox Grid.Row="2" Grid.Column="12" Name="klasyUczoneN"></TextBox>
                                 <Label Grid.Column="13">Data zatrudnienia</Label>
                                 <TextBox Grid.Row="2" Grid.Column="13" Name="DataZatrudniena"></TextBox>
-                                <Button Grid.Column="15" Grid.Row="1">dodaj ucznia</Button>
-                                <Button Grid.Column="14" Grid.Row="1">Wyczyść</Button>
+                                <Button Grid.Column="15" Grid.Row="1" Name="dodajNauczyciela">dodaj nauczyciela</Button>
+                                <Button Grid.Column="14" Grid.Row="1" Name="wyczyscNauczyciela">Wyczyść</Button>
                             </Grid>
 
                         </Grid>
@@ -174,8 +174,8 @@
                                 <TextBox Grid.Row="2" Grid.Column="11" Name="Opis"></TextBox>
                                 <Label Grid.Column="12">Klasy uczone</Label>
                                 <TextBox Grid.Row="2" Grid.Column="12" Name="DataZatrudnienaP"></TextBox>
-                                <Button Grid.Column="14" Grid.Row="1">dodaj ucznia</Button>
-                                <Button Grid.Column="13" Grid.Row="1">Wyczyść</Button>
+                                <Button Grid.Column="14" Grid.Row="1" Name="dodajPracownika">dodaj pracownika</Button>
+                                <Button Grid.Column="13" Grid.Row="1" Name="wyczyscPracownika">Wyczyść</Button>
                             </Grid>
 
                         </Grid>
