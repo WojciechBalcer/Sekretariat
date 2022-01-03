@@ -18,6 +18,7 @@ namespace Sekretariat
     public partial class MainWindow : Window
     {
         int licznikUczniow = 0;
+        int licznikNauczycieli = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace Sekretariat
         private void dodajUcznia(object sender, RoutedEventArgs e)
         {
             licznikUczniow++;
+            licznikNauczycieli++;
 
             String imieUcznia = imieU.Text;
             String drugieImieUcznia = drugieImieU.Text;
@@ -111,6 +113,86 @@ namespace Sekretariat
             dataUrodzeniaU.Text = " ";
             peselU.Text = " ";
             doKlasyU.Text = " ";
+        }
+        private void dodajNauczyciela(object sender, RoutedEventArgs e)
+        {
+            licznikNauczycieli++;
+
+            String imieNauczyciela = imieN.Text;
+            String drugieImieNauczyciela = drugieImieN.Text;
+            String nazwiskoNauczyciela = nazwiskoN.Text;
+            String nazwiskoPanieniskieNauczyciela = nazwiskoPanienskieN.Text;
+            String imionaRodzicowNauczyciela = imonaRodzicowN.Text;
+            String dataUrodzeniaNauczyciela = dataUrodzeniaN.Text;
+            String peselNauczyciela = peselN.Text;
+
+
+            if (licznikNauczycieli == 1)
+            {
+
+                imieN1.Text = imieNauczyciela;
+                drugieImieN1.Text = drugieImieNauczyciela;
+                nazwiskoN1.Text = nazwiskoNauczyciela;
+                panienskieNazwiskoN1.Text = nazwiskoPanieniskieNauczyciela;
+                imionaRodzicowN1.Text = imionaRodzicowNauczyciela;
+                datUrN1.Text = dataUrodzeniaNauczyciela;
+                peselN1.Text = peselNauczyciela;
+            }
+            if (licznikNauczycieli == 2)
+            {
+
+                imieN2.Text = imieNauczyciela;
+                drugieImieN2.Text = drugieImieNauczyciela;
+                nazwiskoN2.Text = nazwiskoNauczyciela;
+                panienskieNazwiskoN2.Text = nazwiskoPanieniskieNauczyciela;
+                imionaRodzicowN2.Text = imionaRodzicowNauczyciela;
+                datUrN2.Text = dataUrodzeniaNauczyciela;
+                peselN2.Text = peselNauczyciela;
+            }
+            if (licznikNauczycieli == 3)
+            {
+
+                imieN3.Text = imieNauczyciela;
+                drugieImieN3.Text = drugieImieNauczyciela;
+                nazwiskoN3.Text = nazwiskoNauczyciela;
+                panienskieNazwiskoN3.Text = nazwiskoPanieniskieNauczyciela;
+                imionaRodzicowN3.Text = imionaRodzicowNauczyciela;
+                datUrN3.Text = dataUrodzeniaNauczyciela;
+                peselN3.Text = peselNauczyciela;
+            }
+            if (licznikNauczycieli == 4)
+            {
+
+                imieN4.Text = imieNauczyciela;
+                drugieImieN4.Text = drugieImieNauczyciela;
+                nazwiskoN4.Text = nazwiskoNauczyciela;
+                panienskieNazwiskoN4.Text = nazwiskoPanieniskieNauczyciela;
+                imionaRodzicowN4.Text = imionaRodzicowNauczyciela;
+                datUrN4.Text = dataUrodzeniaNauczyciela;
+                peselN4.Text = peselNauczyciela;
+            }
+            if (licznikNauczycieli == 5)
+            {
+
+                imieN5.Text = imieNauczyciela;
+                drugieImieN5.Text = drugieImieNauczyciela;
+                nazwiskoN5.Text = nazwiskoNauczyciela;
+                panienskieNazwiskoN5.Text = nazwiskoPanieniskieNauczyciela;
+                imionaRodzicowN5.Text = imionaRodzicowNauczyciela;
+                datUrN5.Text = dataUrodzeniaNauczyciela;
+                peselN5.Text = peselNauczyciela;
+            }
+            MessageBox.Show("Dodano nauczyciela " + licznikNauczycieli);
+        }
+        public void wyczyscNauczyciela(object sender, RoutedEventArgs e)
+        {
+            imieN.Text = " ";
+            drugieImieN.Text = " ";
+            nazwiskoN.Text = " ";
+            nazwiskoPanienskieN.Text = " ";
+            imonaRodzicowN.Text = " ";
+            dataUrodzeniaN.Text = " ";
+            peselN.Text = " ";
         }
     }
 }
