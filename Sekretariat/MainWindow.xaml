@@ -58,7 +58,7 @@
                                 <Label Grid.Column="11">Przynoależność do grup</Label>
                                 <TextBox Grid.Row="2" Grid.Column="11" Name="doGrupyU"></TextBox>
                                 <Button Grid.Column="13" Grid.Row="1" Click="dodajUcznia">dodaj ucznia</Button>
-                                <Button Grid.Column="12" Grid.Row="1" Name="wyczyscUcznia">Wyczyść</Button>
+                                <Button Grid.Column="12" Grid.Row="1" Click="wyczyscUcznia">Wyczyść</Button>
                             </Grid>
 
                         </Grid>

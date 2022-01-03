@@ -101,5 +101,16 @@ namespace Sekretariat
 
             MessageBox.Show("Dodano ucznia" + licznikUczniow);
         }
+        public void wyczyscUcznia(object sender, RoutedEventArgs e)
+        {
+            imieU.Text = " ";
+            drugieImieU.Text = " ";
+            nazwiskoU.Text = " ";
+            nazwiskoPanienskieU.Text = " ";
+            imonaRodzicowU.Text = " ";
+            dataUrodzeniaU.Text = " ";
+            peselU.Text = " ";
+            doKlasyU.Text = " ";
+        }
     }
 }
