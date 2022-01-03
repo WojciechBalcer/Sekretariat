@@ -9,177 +9,296 @@
     <Grid>
         <DockPanel>
 
-            <TabControl Name="tabCtr">
-                <TabItem Header="Dodaj ucznia">
-                    <Grid>
-                        <Grid ShowGridLines="True">
-                            <Grid.ColumnDefinitions>
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TabControl Name="tabCtr">
+                    <TabItem Header="Dodaj ucznia">
+                        <Grid>
+                            <Grid ShowGridLines="True">
+                                <Grid.ColumnDefinitions>
 
-                                <ColumnDefinition Width="0*"></ColumnDefinition>
-                                <ColumnDefinition Width="2*"></ColumnDefinition>
-                                <ColumnDefinition Width="3*"></ColumnDefinition>
-                                <ColumnDefinition Width="3*"></ColumnDefinition>
-                                <ColumnDefinition Width="5*"></ColumnDefinition>
-                                <ColumnDefinition Width="4*"></ColumnDefinition>
-                                <ColumnDefinition Width="4*"></ColumnDefinition>
-                                <ColumnDefinition Width="2*"></ColumnDefinition>
-                                <ColumnDefinition Width="2*"></ColumnDefinition>
-                                <ColumnDefinition Width="2*"></ColumnDefinition>
-                                <ColumnDefinition Width="6*"></ColumnDefinition>
-                                <ColumnDefinition Width="6*"></ColumnDefinition>
-                                <ColumnDefinition Width="6*"></ColumnDefinition>
-                                <ColumnDefinition Width="6*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="1*"></RowDefinition>
-                                <RowDefinition Height="1*"></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <Label Grid.Column="1">Imię</Label>
-                            <TextBox Grid.Row="2" Grid.Column="1" Name="imieU"></TextBox>
-                            <Label Grid.Column="2">Drugie imię</Label>
-                            <TextBox Grid.Row="2" Grid.Column="2" Name="drugieImieU"></TextBox>
-                            <Label Grid.Column="3">Nazwisko</Label>
-                            <TextBox Grid.Row="2" Grid.Column="3" Name="nazwiskoU"></TextBox>
-                            <Label Grid.Column="4">Nazwisko panieńskie</Label>
-                            <TextBox Grid.Row="2" Grid.Column="4" Name="nazwiskoPanienskieU"></TextBox>
-                            <Label Grid.Column="5">Imiona rodziców</Label>
-                            <TextBox Grid.Row="2" Grid.Column="5" Name="imonaRodzicowU"></TextBox>
-                            <Label Grid.Column="6">Data urodzenia</Label>
-                            <TextBox Grid.Row="2" Grid.Column="6" Name="dataUrodzeniaU"></TextBox>
-                            <Label Grid.Column="7">Pesel</Label>
-                            <TextBox Grid.Row="2" Grid.Column="7" Name="peselU"></TextBox>
-                            <Label Grid.Column="8">Zdjęcie</Label>
-                            <TextBox Grid.Row="2" Grid.Column="8" Name="zdjecieU"></TextBox>
-                            <Label Grid.Column="9">Płeć</Label>
-                            <TextBox Grid.Row="2" Grid.Column="9" Name="plecU"></TextBox>
-                            <Label Grid.Column="10">Przynależność do klasy</Label>
-                            <TextBox Grid.Row="2" Grid.Column="10" Name="doKlasyU"></TextBox>
-                            <Label Grid.Column="11">Przynoależność do grup</Label>
-                            <TextBox Grid.Row="2" Grid.Column="11" Name="doGrupyU"></TextBox>
-                            <Button Grid.Column="13" Grid.Row="1">dodaj ucznia</Button>
-                            <Button Grid.Column="12" Grid.Row="1">Wyczyść</Button>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"></RowDefinition>
+                                    <RowDefinition Height="1*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1">Imię</Label>
+                                <TextBox Grid.Row="2" Grid.Column="1" Name="imieU"></TextBox>
+                                <Label Grid.Column="2">Drugie imię</Label>
+                                <TextBox Grid.Row="2" Grid.Column="2" Name="drugieImieU"></TextBox>
+                                <Label Grid.Column="3">Nazwisko</Label>
+                                <TextBox Grid.Row="2" Grid.Column="3" Name="nazwiskoU"></TextBox>
+                                <Label Grid.Column="4">Nazwisko panieńskie</Label>
+                                <TextBox Grid.Row="2" Grid.Column="4" Name="nazwiskoPanienskieU"></TextBox>
+                                <Label Grid.Column="5">Imiona rodziców</Label>
+                                <TextBox Grid.Row="2" Grid.Column="5" Name="imonaRodzicowU"></TextBox>
+                                <Label Grid.Column="6">Data urodzenia</Label>
+                                <TextBox Grid.Row="2" Grid.Column="6" Name="dataUrodzeniaU"></TextBox>
+                                <Label Grid.Column="7">Pesel</Label>
+                                <TextBox Grid.Row="2" Grid.Column="7" Name="peselU"></TextBox>
+                                <Label Grid.Column="8">Zdjęcie</Label>
+                                <TextBox Grid.Row="2" Grid.Column="8" Name="zdjecieU"></TextBox>
+                                <Label Grid.Column="9">Płeć</Label>
+                                <TextBox Grid.Row="2" Grid.Column="9" Name="plecU"></TextBox>
+                                <Label Grid.Column="10">Przynależność do klasy</Label>
+                                <TextBox Grid.Row="2" Grid.Column="10" Name="doKlasyU"></TextBox>
+                                <Label Grid.Column="11">Przynoależność do grup</Label>
+                                <TextBox Grid.Row="2" Grid.Column="11" Name="doGrupyU"></TextBox>
+                                <Button Grid.Column="13" Grid.Row="1">dodaj ucznia</Button>
+                                <Button Grid.Column="12" Grid.Row="1">Wyczyść</Button>
+                            </Grid>
+
                         </Grid>
 
-                    </Grid>
+
+                    </TabItem>
 
 
-                </TabItem>
+                    <TabItem Header="Dodaj nauczyciela">
+                        <Grid>
+                            <Grid ShowGridLines="True">
+                                <Grid.ColumnDefinitions>
 
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"></RowDefinition>
+                                    <RowDefinition Height="1*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1">Imię</Label>
+                                <TextBox Grid.Row="2" Grid.Column="1" Name="imieN"></TextBox>
+                                <Label Grid.Column="2">Drugie imię</Label>
+                                <TextBox Grid.Row="2" Grid.Column="2" Name="drugieImieN"></TextBox>
+                                <Label Grid.Column="3">Nazwisko</Label>
+                                <TextBox Grid.Row="2" Grid.Column="3" Name="nazwiskoN"></TextBox>
+                                <Label Grid.Column="4">Nazwisko panieńskie</Label>
+                                <TextBox Grid.Row="2" Grid.Column="4" Name="nazwiskoPanienskieN"></TextBox>
+                                <Label Grid.Column="5">Imiona rodziców</Label>
+                                <TextBox Grid.Row="2" Grid.Column="5" Name="imonaRodzicowN"></TextBox>
+                                <Label Grid.Column="6">Data urodzenia</Label>
+                                <TextBox Grid.Row="2" Grid.Column="6" Name="dataUrodzeniaN"></TextBox>
+                                <Label Grid.Column="7">Pesel</Label>
+                                <TextBox Grid.Row="2" Grid.Column="7" Name="peselN"></TextBox>
+                                <Label Grid.Column="8">Zdjęcie</Label>
+                                <TextBox Grid.Row="2" Grid.Column="8" Name="zdjecieN"></TextBox>
+                                <Label Grid.Column="9">Płeć</Label>
+                                <TextBox Grid.Row="2" Grid.Column="9" Name="plecN"></TextBox>
+                                <Label Grid.Column="10">Wychowawstwo</Label>
+                                <TextBox Grid.Row="2" Grid.Column="10" Name="WychowawstwoN"></TextBox>
+                                <Label Grid.Column="11">Przedmioty Nauczania</Label>
+                                <TextBox Grid.Row="2" Grid.Column="11" Name="przedmiotyNauczania"></TextBox>
+                                <Label Grid.Column="12">Klasy uczone</Label>
+                                <TextBox Grid.Row="2" Grid.Column="12" Name="klasyUczoneN"></TextBox>
+                                <Label Grid.Column="13">Data zatrudnienia</Label>
+                                <TextBox Grid.Row="2" Grid.Column="13" Name="DataZatrudniena"></TextBox>
+                                <Button Grid.Column="15" Grid.Row="1">dodaj ucznia</Button>
+                                <Button Grid.Column="14" Grid.Row="1">Wyczyść</Button>
+                            </Grid>
 
-                <TabItem Header="Dodaj nauczyciela">
-                    <Grid>
-                        <Grid ShowGridLines="True">
-                            <Grid.ColumnDefinitions>
-
-                                <ColumnDefinition Width="0*"></ColumnDefinition>
-                                <ColumnDefinition Width="2*"></ColumnDefinition>
-                                <ColumnDefinition Width="5*"></ColumnDefinition>
-                                <ColumnDefinition Width="3*"></ColumnDefinition>
-                                <ColumnDefinition Width="6*"></ColumnDefinition>
-                                <ColumnDefinition Width="6*"></ColumnDefinition>
-                                <ColumnDefinition Width="5*"></ColumnDefinition>
-                                <ColumnDefinition Width="3*"></ColumnDefinition>
-                                <ColumnDefinition Width="3*"></ColumnDefinition>
-                                <ColumnDefinition Width="2*"></ColumnDefinition>
-                                <ColumnDefinition Width="6*"></ColumnDefinition>
-                                <ColumnDefinition Width="8*"></ColumnDefinition>
-                                <ColumnDefinition Width="6*"></ColumnDefinition>
-                                <ColumnDefinition Width="7*"></ColumnDefinition>
-                                <ColumnDefinition Width="6*"></ColumnDefinition>
-                                <ColumnDefinition Width="6*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="1*"></RowDefinition>
-                                <RowDefinition Height="1*"></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <Label Grid.Column="1">Imię</Label>
-                            <TextBox Grid.Row="2" Grid.Column="1" Name="imieN"></TextBox>
-                            <Label Grid.Column="2">Drugie imię</Label>
-                            <TextBox Grid.Row="2" Grid.Column="2" Name="drugieImieN"></TextBox>
-                            <Label Grid.Column="3">Nazwisko</Label>
-                            <TextBox Grid.Row="2" Grid.Column="3" Name="nazwiskoN"></TextBox>
-                            <Label Grid.Column="4">Nazwisko panieńskie</Label>
-                            <TextBox Grid.Row="2" Grid.Column="4" Name="nazwiskoPanienskieN"></TextBox>
-                            <Label Grid.Column="5">Imiona rodziców</Label>
-                            <TextBox Grid.Row="2" Grid.Column="5" Name="imonaRodzicowN"></TextBox>
-                            <Label Grid.Column="6">Data urodzenia</Label>
-                            <TextBox Grid.Row="2" Grid.Column="6" Name="dataUrodzeniaN"></TextBox>
-                            <Label Grid.Column="7">Pesel</Label>
-                            <TextBox Grid.Row="2" Grid.Column="7" Name="peselN"></TextBox>
-                            <Label Grid.Column="8">Zdjęcie</Label>
-                            <TextBox Grid.Row="2" Grid.Column="8" Name="zdjecieN"></TextBox>
-                            <Label Grid.Column="9">Płeć</Label>
-                            <TextBox Grid.Row="2" Grid.Column="9" Name="plecN"></TextBox>
-                            <Label Grid.Column="10">Wychowawstwo</Label>
-                            <TextBox Grid.Row="2" Grid.Column="10" Name="WychowawstwoN"></TextBox>
-                            <Label Grid.Column="11">Przedmioty Nauczania</Label>
-                            <TextBox Grid.Row="2" Grid.Column="11" Name="przedmiotyNauczania"></TextBox>
-                            <Label Grid.Column="12">Klasy uczone</Label>
-                            <TextBox Grid.Row="2" Grid.Column="12" Name="klasyUczoneN"></TextBox>
-                            <Label Grid.Column="13">Data zatrudnienia</Label>
-                            <TextBox Grid.Row="2" Grid.Column="13" Name="DataZatrudniena"></TextBox>
-                            <Button Grid.Column="15" Grid.Row="1">dodaj ucznia</Button>
-                            <Button Grid.Column="14" Grid.Row="1">Wyczyść</Button>
                         </Grid>
+                    </TabItem>
+                    <TabItem Header="Dodaj pracownika">
+                        <Grid>
+                            <Grid ShowGridLines="True">
+                                <Grid.ColumnDefinitions>
 
-                    </Grid>
-                </TabItem>
-                <TabItem Header="Dodaj pracownika">
-                    <Grid>
-                        <Grid ShowGridLines="True">
-                            <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"></RowDefinition>
+                                    <RowDefinition Height="1*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1">Imię</Label>
+                                <TextBox Grid.Row="2" Grid.Column="1" Name="imieP"></TextBox>
+                                <Label Grid.Column="2">Drugie imię</Label>
+                                <TextBox Grid.Row="2" Grid.Column="2" Name="drugieImieP"></TextBox>
+                                <Label Grid.Column="3">Nazwisko</Label>
+                                <TextBox Grid.Row="2" Grid.Column="3" Name="nazwiskoP"></TextBox>
+                                <Label Grid.Column="4">Nazwisko panieńskie</Label>
+                                <TextBox Grid.Row="2" Grid.Column="4" Name="nazwiskoPanienskieP"></TextBox>
+                                <Label Grid.Column="5">Imiona rodziców</Label>
+                                <TextBox Grid.Row="2" Grid.Column="5" Name="imonaRodzicowP"></TextBox>
+                                <Label Grid.Column="6">Data urodzenia</Label>
+                                <TextBox Grid.Row="2" Grid.Column="6" Name="dataUrodzeniaP"></TextBox>
+                                <Label Grid.Column="7">Pesel</Label>
+                                <TextBox Grid.Row="2" Grid.Column="7" Name="peselP"></TextBox>
+                                <Label Grid.Column="8">Zdjęcie</Label>
+                                <TextBox Grid.Row="2" Grid.Column="8" Name="zdjecieP"></TextBox>
+                                <Label Grid.Column="9">Płeć</Label>
+                                <TextBox Grid.Row="2" Grid.Column="9" Name="plecP"></TextBox>
+                                <Label Grid.Column="10">Informacje o etacie</Label>
+                                <TextBox Grid.Row="2" Grid.Column="10" Name="etat"></TextBox>
+                                <Label Grid.Column="11">Opis stanowiska</Label>
+                                <TextBox Grid.Row="2" Grid.Column="11" Name="Opis"></TextBox>
+                                <Label Grid.Column="12">Klasy uczone</Label>
+                                <TextBox Grid.Row="2" Grid.Column="12" Name="DataZatrudnienaP"></TextBox>
+                                <Button Grid.Column="14" Grid.Row="1">dodaj ucznia</Button>
+                                <Button Grid.Column="13" Grid.Row="1">Wyczyść</Button>
+                            </Grid>
 
-                                <ColumnDefinition Width="0*"></ColumnDefinition>
-                                <ColumnDefinition Width="2*"></ColumnDefinition>
-                                <ColumnDefinition Width="5*"></ColumnDefinition>
-                                <ColumnDefinition Width="3*"></ColumnDefinition>
-                                <ColumnDefinition Width="6*"></ColumnDefinition>
-                                <ColumnDefinition Width="6*"></ColumnDefinition>
-                                <ColumnDefinition Width="5*"></ColumnDefinition>
-                                <ColumnDefinition Width="3*"></ColumnDefinition>
-                                <ColumnDefinition Width="3*"></ColumnDefinition>
-                                <ColumnDefinition Width="2*"></ColumnDefinition>
-                                <ColumnDefinition Width="6*"></ColumnDefinition>
-                                <ColumnDefinition Width="8*"></ColumnDefinition>
-                                <ColumnDefinition Width="6*"></ColumnDefinition>
-                                <ColumnDefinition Width="7*"></ColumnDefinition>
-                                <ColumnDefinition Width="6*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="1*"></RowDefinition>
-                                <RowDefinition Height="1*"></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <Label Grid.Column="1">Imię</Label>
-                            <TextBox Grid.Row="2" Grid.Column="1" Name="imieP"></TextBox>
-                            <Label Grid.Column="2">Drugie imię</Label>
-                            <TextBox Grid.Row="2" Grid.Column="2" Name="drugieImieP"></TextBox>
-                            <Label Grid.Column="3">Nazwisko</Label>
-                            <TextBox Grid.Row="2" Grid.Column="3" Name="nazwiskoP"></TextBox>
-                            <Label Grid.Column="4">Nazwisko panieńskie</Label>
-                            <TextBox Grid.Row="2" Grid.Column="4" Name="nazwiskoPanienskieP"></TextBox>
-                            <Label Grid.Column="5">Imiona rodziców</Label>
-                            <TextBox Grid.Row="2" Grid.Column="5" Name="imonaRodzicowP"></TextBox>
-                            <Label Grid.Column="6">Data urodzenia</Label>
-                            <TextBox Grid.Row="2" Grid.Column="6" Name="dataUrodzeniaP"></TextBox>
-                            <Label Grid.Column="7">Pesel</Label>
-                            <TextBox Grid.Row="2" Grid.Column="7" Name="peselP"></TextBox>
-                            <Label Grid.Column="8">Zdjęcie</Label>
-                            <TextBox Grid.Row="2" Grid.Column="8" Name="zdjecieP"></TextBox>
-                            <Label Grid.Column="9">Płeć</Label>
-                            <TextBox Grid.Row="2" Grid.Column="9" Name="plecP"></TextBox>
-                            <Label Grid.Column="10">Informacje o etacie</Label>
-                            <TextBox Grid.Row="2" Grid.Column="10" Name="etat"></TextBox>
-                            <Label Grid.Column="11">Opis stanowiska</Label>
-                            <TextBox Grid.Row="2" Grid.Column="11" Name="Opis"></TextBox>
-                            <Label Grid.Column="12">Klasy uczone</Label>
-                            <TextBox Grid.Row="2" Grid.Column="12" Name="DataZatrudnienaP"></TextBox>
-                            <Button Grid.Column="14" Grid.Row="1">dodaj ucznia</Button>
-                            <Button Grid.Column="13" Grid.Row="1">Wyczyść</Button>
                         </Grid>
+                    </TabItem>
+                    <TabItem Header="Lista uczniów">
+                        <Grid ShowGridLines="True">
 
-                    </Grid>
-                </TabItem>
-            </TabControl>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                <RowDefinition Height="1*" ></RowDefinition>
+                                
+                                </Grid.RowDefinitions>
+
+                            <Label>Imię</Label>
+                            <Label  Grid.Column="1">Drugie imię</Label>
+                            <Label  Grid.Column="2">Nazwisko</Label>
+                            <Label  Grid.Column="3">Nazwisko panieńskie matki</Label>
+                            <Label  Grid.Column="4">Imiona rodziców</Label>
+                            <Label  Grid.Column="5">Data urodzenia</Label>
+                            <Label  Grid.Column="6">Pesel</Label>
+                            <Label  Grid.Column="7">Zdjęcie</Label>
+                            <Label  Grid.Column="8">Płeć</Label>
+                            <Label  Grid.Column="9">Klasa</Label>
+                            <Label  Grid.Column="10">grupa</Label>
+
+
+                            <TextBlock Name="imieU1" Grid.Row="1"></TextBlock>
+                            <TextBlock Name="drugieImieU1" Grid.Column="1" Grid.Row="1"></TextBlock>
+                            <TextBlock Name="nazwiskoU1" Grid.Column="2" Grid.Row="1"></TextBlock>
+                            <TextBlock Name="panienskieNazwiskoU1" Grid.Column="3" Grid.Row="1"></TextBlock>
+                            <TextBlock Name="imionaRodzicowU1" Grid.Column="4" Grid.Row="1"></TextBlock>
+                            <TextBlock Name="datUrU1" Grid.Column="5" Grid.Row="1"></TextBlock>
+                            <TextBlock Name="peselU1" Grid.Column="6" Grid.Row="1"></TextBlock>
+                            <TextBlock Name="zdjU1" Grid.Column="7" Grid.Row="1"></TextBlock>
+                            <TextBlock Name="plecU1" Grid.Column="8" Grid.Row="1"></TextBlock>
+                            <TextBlock Name="klasaU1" Grid.Column="9" Grid.Row="1"></TextBlock>
+                            <TextBlock Name="grupaU1" Grid.Column="10" Grid.Row="1"></TextBlock>
+
+                            <TextBlock Name="imieU2" Grid.Row="2"></TextBlock>
+                            <TextBlock Name="drugieImieU2" Grid.Column="1" Grid.Row="2"></TextBlock>
+                            <TextBlock Name="nazwiskoU2" Grid.Column="2" Grid.Row="2"></TextBlock>
+                            <TextBlock Name="panienskieNazwiskoU2" Grid.Column="3" Grid.Row="2"></TextBlock>
+                            <TextBlock Name="imionaRodzicowU2" Grid.Column="4" Grid.Row="2"></TextBlock>
+                            <TextBlock Name="datUrU2" Grid.Column="5" Grid.Row="2"></TextBlock>
+                            <TextBlock Name="peselU2" Grid.Column="6" Grid.Row="2"></TextBlock>
+                            <TextBlock Name="zdjU2" Grid.Column="7" Grid.Row="2"></TextBlock>
+                            <TextBlock Name="plecU2" Grid.Column="8" Grid.Row="2"></TextBlock>
+                            <TextBlock Name="klasaU2" Grid.Column="9" Grid.Row="2"></TextBlock>
+                            <TextBlock Name="grupaU2" Grid.Column="10" Grid.Row="2"></TextBlock>
+
+                            <TextBlock Name="imieU3" Grid.Row="3"></TextBlock>
+                            <TextBlock Name="drugieImieU3" Grid.Column="1" Grid.Row="3"></TextBlock>
+                            <TextBlock Name="nazwiskoU3" Grid.Column="2" Grid.Row="3"></TextBlock>
+                            <TextBlock Name="panienskieNazwiskoU3" Grid.Column="3" Grid.Row="3"></TextBlock>
+                            <TextBlock Name="imionaRodzicowU3" Grid.Column="4" Grid.Row="3"></TextBlock>
+                            <TextBlock Name="datUrU3" Grid.Column="5" Grid.Row="3"></TextBlock>
+                            <TextBlock Name="peselU3" Grid.Column="6" Grid.Row="3"></TextBlock>
+                            <TextBlock Name="zdjU3" Grid.Column="7" Grid.Row="3"></TextBlock>
+                            <TextBlock Name="plecU3" Grid.Column="8" Grid.Row="3"></TextBlock>
+                            <TextBlock Name="klasaU3" Grid.Column="9" Grid.Row="3"></TextBlock>
+                            <TextBlock Name="grupaU3" Grid.Column="10" Grid.Row="3"></TextBlock>
+
+                            <TextBlock Name="imieU4" Grid.Row="2"></TextBlock>
+                            <TextBlock Name="drugieImieU4" Grid.Column="1" Grid.Row="4"></TextBlock>
+                            <TextBlock Name="nazwiskoU4" Grid.Column="2" Grid.Row="4"></TextBlock>
+                            <TextBlock Name="panienskieNazwiskoU4" Grid.Column="3" Grid.Row="4"></TextBlock>
+                            <TextBlock Name="imionaRodzicowU4" Grid.Column="4" Grid.Row="4"></TextBlock>
+                            <TextBlock Name="datUrU4" Grid.Column="5" Grid.Row="4"></TextBlock>
+                            <TextBlock Name="peselU4" Grid.Column="6" Grid.Row="4"></TextBlock>
+                            <TextBlock Name="zdjU4" Grid.Column="7" Grid.Row="4"></TextBlock>
+                            <TextBlock Name="plecU4" Grid.Column="8" Grid.Row="4"></TextBlock>
+                            <TextBlock Name="klasaU4" Grid.Column="9" Grid.Row="4"></TextBlock>
+                            <TextBlock Name="grupaU4" Grid.Column="10" Grid.Row="4"></TextBlock>
+
+                            <TextBlock Name="imieU5" Grid.Row="5"></TextBlock>
+                            <TextBlock Name="drugieImieU5" Grid.Column="1" Grid.Row="5"></TextBlock>
+                            <TextBlock Name="nazwiskoU5" Grid.Column="2" Grid.Row="5"></TextBlock>
+                            <TextBlock Name="panienskieNazwiskoU5" Grid.Column="3" Grid.Row="5"></TextBlock>
+                            <TextBlock Name="imionaRodzicowU5" Grid.Column="4" Grid.Row="5"></TextBlock>
+                            <TextBlock Name="datUrU5" Grid.Column="5" Grid.Row="5"></TextBlock>
+                            <TextBlock Name="peselU5" Grid.Column="6" Grid.Row="5"></TextBlock>
+                            <TextBlock Name="zdjU5" Grid.Column="7" Grid.Row="5"></TextBlock>
+                            <TextBlock Name="plecU5" Grid.Column="8" Grid.Row="5"></TextBlock>
+                            <TextBlock Name="klasaU5" Grid.Column="9" Grid.Row="5"></TextBlock>
+                            <TextBlock Name="grupaU5" Grid.Column="10" Grid.Row="5"></TextBlock>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Nauczyciele">
+                        
+                    </TabItem>
+                </TabControl>
+            </StackPanel>
         </DockPanel>
     </Grid>
 </Window>
