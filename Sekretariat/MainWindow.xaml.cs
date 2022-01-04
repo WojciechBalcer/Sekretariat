@@ -19,6 +19,8 @@ namespace Sekretariat
     {
         int licznikUczniow = 0;
         int licznikNauczycieli = 0;
+        int licznikPracownikow = 0;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -193,6 +195,86 @@ namespace Sekretariat
             imonaRodzicowN.Text = " ";
             dataUrodzeniaN.Text = " ";
             peselN.Text = " ";
+        }
+        private void dodajPracownika(object sender, RoutedEventArgs e)
+        {
+            licznikPracownikow++;
+
+            String imiePracownika = imieP.Text;
+            String drugieImiePracownika = drugieImieP.Text;
+            String nazwiskoPracownika = nazwiskoP.Text;
+            String nazwiskoPanienskiePracownika = nazwiskoPanienskieP.Text;
+            String imonaRodzicowPracownika = imonaRodzicowP.Text;
+            String dataUrodzeniaPracownika = dataUrodzeniaP.Text;
+            String peselNauczyciela = peselP.Text;
+
+
+            if (licznikPracownikow == 1)
+            {
+
+                imieP1.Text = imiePracownika;
+                drugieImieP1.Text = drugieImiePracownika;
+                nazwiskoP1.Text = nazwiskoPracownika;
+                panienskieNazwiskoP1.Text = nazwiskoPanienskiePracownika;
+                imionaRodzicowP1.Text = imonaRodzicowPracownika;
+                datUrP1.Text = dataUrodzeniaPracownika;
+                peselP1.Text = peselNauczyciela;
+            }
+            if (licznikPracownikow == 2)
+            {
+
+                imieP2.Text = imiePracownika;
+                drugieImieP2.Text = drugieImiePracownika;
+                nazwiskoP2.Text = nazwiskoPracownika;
+                panienskieNazwiskoP2.Text = nazwiskoPanienskiePracownika;
+                imionaRodzicowP2.Text = imonaRodzicowPracownika;
+                datUrP2.Text = dataUrodzeniaPracownika;
+                peselP2.Text = peselNauczyciela;
+            }
+            if (licznikPracownikow == 3)
+            {
+
+                imieP3.Text = imiePracownika;
+                drugieImieP3.Text = drugieImiePracownika;
+                nazwiskoP3.Text = nazwiskoPracownika;
+                panienskieNazwiskoP3.Text = nazwiskoPanienskiePracownika;
+                imionaRodzicowP3.Text = imonaRodzicowPracownika;
+                datUrP3.Text = dataUrodzeniaPracownika;
+                peselP3.Text = peselNauczyciela;
+            }
+            if (licznikPracownikow == 4)
+            {
+
+                imieP4.Text = imiePracownika;
+                drugieImieP4.Text = drugieImiePracownika;
+                nazwiskoP4.Text = nazwiskoPracownika;
+                panienskieNazwiskoP4.Text = nazwiskoPanienskiePracownika;
+                imionaRodzicowP4.Text = imonaRodzicowPracownika;
+                datUrP4.Text = dataUrodzeniaPracownika;
+                peselP4.Text = peselNauczyciela;
+            }
+            if (licznikPracownikow == 5)
+            {
+
+                imieP5.Text = imiePracownika;
+                drugieImieP5.Text = drugieImiePracownika;
+                nazwiskoP5.Text = nazwiskoPracownika;
+                panienskieNazwiskoP5.Text = nazwiskoPanienskiePracownika;
+                imionaRodzicowP5.Text = imonaRodzicowPracownika;
+                datUrP5.Text = dataUrodzeniaPracownika;
+                peselP5.Text = peselNauczyciela;
+            }
+            MessageBox.Show("Dodano pracownika " + licznikPracownikow);
+        }
+        public void wyczyscPracownika(object sender, RoutedEventArgs e)
+        {
+            imieP.Text = " ";
+            drugieImieP.Text = " ";
+            nazwiskoP.Text = " ";
+            nazwiskoPanienskieP.Text = " ";
+            imonaRodzicowP.Text = " ";
+            dataUrodzeniaP.Text = " ";
+            peselP.Text = " ";
         }
     }
 }
