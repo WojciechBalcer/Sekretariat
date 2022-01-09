@@ -17,16 +17,19 @@ namespace Sekretariat
 {
     public partial class MainWindow : Window
     {
-        int licznikUczniow = 0;
-        int licznikNauczycieli = 0;
-        int licznikPracownikow = 0;
+        
+
+        //int licznikUczniow = 0;
+        //int licznikNauczycieli = 0;
+        //int licznikPracownikow = 0;
 
         public MainWindow()
         {
             InitializeComponent();
+          
         }
         
-        private void dodajUcznia(object sender, RoutedEventArgs e)
+        /*private void dodajUcznia(object sender, RoutedEventArgs e)
         {
             licznikUczniow++;
             licznikNauczycieli++;
@@ -105,7 +108,7 @@ namespace Sekretariat
 
             MessageBox.Show("Dodano ucznia" + licznikUczniow);
         }
-        public void wyczyscUcznia(object sender, RoutedEventArgs e)
+        /*public void wyczyscUcznia(object sender, RoutedEventArgs e)
         {
             imieU.Text = " ";
             drugieImieU.Text = " ";
@@ -275,6 +278,6 @@ namespace Sekretariat
             imonaRodzicowP.Text = " ";
             dataUrodzeniaP.Text = " ";
             peselP.Text = " ";
-        }
+        }*/
     }
 }

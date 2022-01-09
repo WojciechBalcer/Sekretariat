@@ -12,534 +12,106 @@
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
                 <TabControl Name="tabCtr">
                     <TabItem Header="Dodaj ucznia">
-                        <Grid>
-                            <Grid ShowGridLines="True">
-                                <Grid.ColumnDefinitions>
-
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="1*"></RowDefinition>
-                                    <RowDefinition Height="1*"></RowDefinition>
-                                </Grid.RowDefinitions>
-                                <Label Grid.Column="1">Imię</Label>
-                                <TextBox Grid.Row="2" Grid.Column="1" Name="imieU"></TextBox>
-                                <Label Grid.Column="2">Drugie imię</Label>
-                                <TextBox Grid.Row="2" Grid.Column="2" Name="drugieImieU"></TextBox>
-                                <Label Grid.Column="3">Nazwisko</Label>
-                                <TextBox Grid.Row="2" Grid.Column="3" Name="nazwiskoU"></TextBox>
-                                <Label Grid.Column="4">Nazwisko panieńskie</Label>
-                                <TextBox Grid.Row="2" Grid.Column="4" Name="nazwiskoPanienskieU"></TextBox>
-                                <Label Grid.Column="5">Imiona rodziców</Label>
-                                <TextBox Grid.Row="2" Grid.Column="5" Name="imonaRodzicowU"></TextBox>
-                                <Label Grid.Column="6">Data urodzenia</Label>
-                                <TextBox Grid.Row="2" Grid.Column="6" Name="dataUrodzeniaU"></TextBox>
-                                <Label Grid.Column="7">Pesel</Label>
-                                <TextBox Grid.Row="2" Grid.Column="7" Name="peselU"></TextBox>
-                                <Label Grid.Column="8">Zdjęcie</Label>
-                                <TextBox Grid.Row="2" Grid.Column="8" Name="zdjecieU"></TextBox>
-                                <Label Grid.Column="9">Płeć</Label>
-                                <TextBox Grid.Row="2" Grid.Column="9" Name="plecU"></TextBox>
-                                <Label Grid.Column="10">Przynależność do klasy</Label>
-                                <TextBox Grid.Row="2" Grid.Column="10" Name="doKlasyU"></TextBox>
-                                <Label Grid.Column="11">Przynoależność do grup</Label>
-                                <TextBox Grid.Row="2" Grid.Column="11" Name="doGrupyU"></TextBox>
-                                <Button Grid.Column="13" Grid.Row="1" Click="dodajUcznia">dodaj ucznia</Button>
-                                <Button Grid.Column="12" Grid.Row="1" Click="wyczyscUcznia">Wyczyść</Button>
-                            </Grid>
-
-                        </Grid>
-
-
+                        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" Name="dodajUcznia">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Imię"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Drugie Imię"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko panieńsie"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Imiona rodziców"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Data urodzenia"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Pesel"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Zdjęcie"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Płeć"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależność do klasy"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależnosć do grupy"></DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
                     </TabItem>
-
-
                     <TabItem Header="Dodaj nauczyciela">
-                        <Grid>
-                            <Grid ShowGridLines="True">
-                                <Grid.ColumnDefinitions>
-
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="1*"></RowDefinition>
-                                    <RowDefinition Height="1*"></RowDefinition>
-                                </Grid.RowDefinitions>
-                                <Label Grid.Column="1">Imię</Label>
-                                <TextBox Grid.Row="2" Grid.Column="1" Name="imieN"></TextBox>
-                                <Label Grid.Column="2">Drugie imię</Label>
-                                <TextBox Grid.Row="2" Grid.Column="2" Name="drugieImieN"></TextBox>
-                                <Label Grid.Column="3">Nazwisko</Label>
-                                <TextBox Grid.Row="2" Grid.Column="3" Name="nazwiskoN"></TextBox>
-                                <Label Grid.Column="4">Nazwisko panieńskie</Label>
-                                <TextBox Grid.Row="2" Grid.Column="4" Name="nazwiskoPanienskieN"></TextBox>
-                                <Label Grid.Column="5">Imiona rodziców</Label>
-                                <TextBox Grid.Row="2" Grid.Column="5" Name="imonaRodzicowN"></TextBox>
-                                <Label Grid.Column="6">Data urodzenia</Label>
-                                <TextBox Grid.Row="2" Grid.Column="6" Name="dataUrodzeniaN"></TextBox>
-                                <Label Grid.Column="7">Pesel</Label>
-                                <TextBox Grid.Row="2" Grid.Column="7" Name="peselN"></TextBox>
-                                <Label Grid.Column="8">Zdjęcie</Label>
-                                <TextBox Grid.Row="2" Grid.Column="8" Name="zdjecieN"></TextBox>
-                                <Label Grid.Column="9">Płeć</Label>
-                                <TextBox Grid.Row="2" Grid.Column="9" Name="plecN"></TextBox>
-                                <Label Grid.Column="10">Wychowawstwo</Label>
-                                <TextBox Grid.Row="2" Grid.Column="10" Name="WychowawstwoN"></TextBox>
-                                <Label Grid.Column="11">Przedmioty Nauczania</Label>
-                                <TextBox Grid.Row="2" Grid.Column="11" Name="przedmiotyNauczania"></TextBox>
-                                <Label Grid.Column="12">Klasy uczone</Label>
-                                <TextBox Grid.Row="2" Grid.Column="12" Name="klasyUczoneN"></TextBox>
-                                <Label Grid.Column="13">Data zatrudnienia</Label>
-                                <TextBox Grid.Row="2" Grid.Column="13" Name="DataZatrudniena"></TextBox>
-                                <Button Grid.Column="15" Grid.Row="1" Click="dodajNauczyciela">dodaj nauczyciela</Button>
-                                <Button Grid.Column="14" Grid.Row="1" Click="wyczyscNauczyciela">Wyczyść</Button>
-                            </Grid>
-
-                        </Grid>
+                        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" Name="dodajNauczyciela">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Imię"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Drugie Imię"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko panieńsie"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Imiona rodziców"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Data urodzenia"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Pesel"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Zdjęcie"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Płeć"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależność do klasy"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależnosć do grupy"></DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
                     </TabItem>
                     <TabItem Header="Dodaj pracownika">
-                        <Grid>
-                            <Grid ShowGridLines="True">
-                                <Grid.ColumnDefinitions>
-
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="1*"></RowDefinition>
-                                    <RowDefinition Height="1*"></RowDefinition>
-                                </Grid.RowDefinitions>
-                                <Label Grid.Column="1">Imię</Label>
-                                <TextBox Grid.Row="2" Grid.Column="1" Name="imieP"></TextBox>
-                                <Label Grid.Column="2">Drugie imię</Label>
-                                <TextBox Grid.Row="2" Grid.Column="2" Name="drugieImieP"></TextBox>
-                                <Label Grid.Column="3">Nazwisko</Label>
-                                <TextBox Grid.Row="2" Grid.Column="3" Name="nazwiskoP"></TextBox>
-                                <Label Grid.Column="4">Nazwisko panieńskie</Label>
-                                <TextBox Grid.Row="2" Grid.Column="4" Name="nazwiskoPanienskieP"></TextBox>
-                                <Label Grid.Column="5">Imiona rodziców</Label>
-                                <TextBox Grid.Row="2" Grid.Column="5" Name="imonaRodzicowP"></TextBox>
-                                <Label Grid.Column="6">Data urodzenia</Label>
-                                <TextBox Grid.Row="2" Grid.Column="6" Name="dataUrodzeniaP"></TextBox>
-                                <Label Grid.Column="7">Pesel</Label>
-                                <TextBox Grid.Row="2" Grid.Column="7" Name="peselP"></TextBox>
-                                <Label Grid.Column="8">Zdjęcie</Label>
-                                <TextBox Grid.Row="2" Grid.Column="8" Name="zdjecieP"></TextBox>
-                                <Label Grid.Column="9">Płeć</Label>
-                                <TextBox Grid.Row="2" Grid.Column="9" Name="plecP"></TextBox>
-                                <Label Grid.Column="10">Informacje o etacie</Label>
-                                <TextBox Grid.Row="2" Grid.Column="10" Name="etat"></TextBox>
-                                <Label Grid.Column="11">Opis stanowiska</Label>
-                                <TextBox Grid.Row="2" Grid.Column="11" Name="Opis"></TextBox>
-                                <Label Grid.Column="12">Klasy uczone</Label>
-                                <TextBox Grid.Row="2" Grid.Column="12" Name="DataZatrudnienaP"></TextBox>
-                                <Button Grid.Column="14" Grid.Row="1" Click="dodajPracownika">dodaj pracownika</Button>
-                                <Button Grid.Column="13" Grid.Row="1" Click="wyczyscPracownika">Wyczyść</Button>
-                            </Grid>
-
-                        </Grid>
+                        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" Name="dodajPracownika">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Imię"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Drugie Imię"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko panieńsie"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Imiona rodziców"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Data urodzenia"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Pesel"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Zdjęcie"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Płeć"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależność do klasy"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależnosć do grupy"></DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
                     </TabItem>
                     <TabItem Header="Uczniowie">
-                        <Grid ShowGridLines="True">
-
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                
-                                </Grid.RowDefinitions>
-
-                            <Label>Imię</Label>
-                            <Label  Grid.Column="1">Drugie imię</Label>
-                            <Label  Grid.Column="2">Nazwisko</Label>
-                            <Label  Grid.Column="3">Nazwisko panieńskie matki</Label>
-                            <Label  Grid.Column="4">Imiona rodziców</Label>
-                            <Label  Grid.Column="5">Data urodzenia</Label>
-                            <Label  Grid.Column="6">Pesel</Label>
-                            <Label  Grid.Column="7">Zdjęcie</Label>
-                            <Label  Grid.Column="8">Płeć</Label>
-                            <Label  Grid.Column="9">Klasa</Label>
-                            <Label  Grid.Column="10">grupa</Label>
-
-
-                            <TextBlock Name="imieU1" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="drugieImieU1" Grid.Column="1" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="nazwiskoU1" Grid.Column="2" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="panienskieNazwiskoU1" Grid.Column="3" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="imionaRodzicowU1" Grid.Column="4" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="datUrU1" Grid.Column="5" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="peselU1" Grid.Column="6" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="zdjU1" Grid.Column="7" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="plecU1" Grid.Column="8" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="klasaU1" Grid.Column="9" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="grupaU1" Grid.Column="10" Grid.Row="1"></TextBlock>
-
-                            <TextBlock Name="imieU2" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="drugieImieU2" Grid.Column="1" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="nazwiskoU2" Grid.Column="2" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="panienskieNazwiskoU2" Grid.Column="3" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="imionaRodzicowU2" Grid.Column="4" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="datUrU2" Grid.Column="5" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="peselU2" Grid.Column="6" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="zdjU2" Grid.Column="7" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="plecU2" Grid.Column="8" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="klasaU2" Grid.Column="9" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="grupaU2" Grid.Column="10" Grid.Row="2"></TextBlock>
-
-                            <TextBlock Name="imieU3" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="drugieImieU3" Grid.Column="1" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="nazwiskoU3" Grid.Column="2" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="panienskieNazwiskoU3" Grid.Column="3" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="imionaRodzicowU3" Grid.Column="4" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="datUrU3" Grid.Column="5" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="peselU3" Grid.Column="6" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="zdjU3" Grid.Column="7" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="plecU3" Grid.Column="8" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="klasaU3" Grid.Column="9" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="grupaU3" Grid.Column="10" Grid.Row="3"></TextBlock>
-
-                            <TextBlock Name="imieU4" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="drugieImieU4" Grid.Column="1" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="nazwiskoU4" Grid.Column="2" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="panienskieNazwiskoU4" Grid.Column="3" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="imionaRodzicowU4" Grid.Column="4" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="datUrU4" Grid.Column="5" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="peselU4" Grid.Column="6" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="zdjU4" Grid.Column="7" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="plecU4" Grid.Column="8" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="klasaU4" Grid.Column="9" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="grupaU4" Grid.Column="10" Grid.Row="4"></TextBlock>
-
-                            <TextBlock Name="imieU5" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="drugieImieU5" Grid.Column="1" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="nazwiskoU5" Grid.Column="2" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="panienskieNazwiskoU5" Grid.Column="3" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="imionaRodzicowU5" Grid.Column="4" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="datUrU5" Grid.Column="5" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="peselU5" Grid.Column="6" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="zdjU5" Grid.Column="7" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="plecU5" Grid.Column="8" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="klasaU5" Grid.Column="9" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="grupaU5" Grid.Column="10" Grid.Row="5"></TextBlock>
-                        </Grid>
+                        <DataGrid AutoGenerateColumns="False" CanUserAddRows="True" IsReadOnly="True" Name="listaUczniow">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Imię"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Drugie Imię"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko panieńsie"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Imiona rodziców"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Data urodzenia"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Pesel"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Zdjęcie"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Płeć"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależność do klasy"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależnosć do grupy"></DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
                     </TabItem>
                     <TabItem Header="Nauczyciele">
-                        <Grid ShowGridLines="True">
-
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-
-                            </Grid.RowDefinitions>
-
-                            <Label>Imię</Label>
-                            <Label  Grid.Column="1">Drugie imię</Label>
-                            <Label  Grid.Column="2">Nazwisko</Label>
-                            <Label  Grid.Column="3">Nazwisko panieńskie matki</Label>
-                            <Label  Grid.Column="4">Imiona rodziców</Label>
-                            <Label  Grid.Column="5">Data urodzenia</Label>
-                            <Label  Grid.Column="6">Pesel</Label>
-                            <Label  Grid.Column="7">Zdjęcie</Label>
-                            <Label  Grid.Column="8">Płeć</Label>
-                            <Label  Grid.Column="9">Wychowawstwo</Label>
-                            <Label  Grid.Column="10">przedmioty nauczne</Label>
-                            <Label  Grid.Column="11">Klasy uczone</Label>
-                            <Label  Grid.Column="12">Data zatrudnienia</Label>
-
-
-                            <TextBlock Name="imieN1" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="drugieImieN1" Grid.Column="1" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="nazwiskoN1" Grid.Column="2" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="panienskieNazwiskoN1" Grid.Column="3" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="imionaRodzicowN1" Grid.Column="4" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="datUrN1" Grid.Column="5" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="peselN1" Grid.Column="6" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="zdjN1" Grid.Column="7" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="plecN1" Grid.Column="8" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="wychowawstwoN1" Grid.Column="9" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="przedmiotyNauczaneN1" Grid.Column="10" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="KlasyUczoneN1" Grid.Column="11" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="DataZatrudN1" Grid.Column="12" Grid.Row="1"></TextBlock>
-
-                            <TextBlock Name="imieN2" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="drugieImieN2" Grid.Column="1" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="nazwiskoN2" Grid.Column="2" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="panienskieNazwiskoN2" Grid.Column="3" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="imionaRodzicowN2" Grid.Column="4" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="datUrN2" Grid.Column="5" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="peselN2" Grid.Column="6" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="zdjN2" Grid.Column="7" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="plecN2" Grid.Column="8" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="wychowawstwoN2" Grid.Column="9" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="przedmiotyNauczaneN2" Grid.Column="10" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="KlasyUczoneN2" Grid.Column="11" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="DataZatrudN2" Grid.Column="12" Grid.Row="2"></TextBlock>
-
-                            <TextBlock Name="imieN3" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="drugieImieN3" Grid.Column="1" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="nazwiskoN3" Grid.Column="2" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="panienskieNazwiskoN3" Grid.Column="3" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="imionaRodzicowN3" Grid.Column="4" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="datUrN3" Grid.Column="5" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="peselN3" Grid.Column="6" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="zdjN3" Grid.Column="7" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="plecN3" Grid.Column="8" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="wychowawstwoN3" Grid.Column="9" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="przedmiotyNauczaneN3" Grid.Column="10" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="KlasyUczoneN3" Grid.Column="11" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="DataZatrudN3" Grid.Column="12" Grid.Row="3"></TextBlock>
-
-                            <TextBlock Name="imieN4" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="drugieImieN4" Grid.Column="1" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="nazwiskoN4" Grid.Column="2" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="panienskieNazwiskoN4" Grid.Column="3" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="imionaRodzicowN4" Grid.Column="4" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="datUrN4" Grid.Column="5" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="peselN4" Grid.Column="6" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="zdjN4" Grid.Column="7" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="plecN4" Grid.Column="8" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="wychowawstwoN4" Grid.Column="9" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="przedmiotyNauczaneN4" Grid.Column="10" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="KlasyUczoneN4" Grid.Column="11" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="DataZatrudN4" Grid.Column="12" Grid.Row="4"></TextBlock>
-
-                            <TextBlock Name="imieN5" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="drugieImieN5" Grid.Column="1" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="nazwiskoN5" Grid.Column="2" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="panienskieNazwiskoN5" Grid.Column="3" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="imionaRodzicowN5" Grid.Column="4" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="datUrN5" Grid.Column="5" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="peselN5" Grid.Column="6" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="zdjN5" Grid.Column="7" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="plecN5" Grid.Column="8" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="wychowawstwoN5" Grid.Column="9" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="przedmiotyNauczaneN5" Grid.Column="10" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="KlasyUczoneN5" Grid.Column="11" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="DataZatrudN5" Grid.Column="12" Grid.Row="5"></TextBlock>
-                        </Grid>
+                        <DataGrid AutoGenerateColumns="False" CanUserAddRows="True" IsReadOnly="True" Name="listaNauczycieli">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Imię"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Drugie Imię"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko panieńsie"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Imiona rodziców"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Data urodzenia"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Pesel"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Zdjęcie"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Płeć"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależność do klasy"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależnosć do grupy"></DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
                     </TabItem>
                     <TabItem Header="Pracownicy">
-                        <Grid ShowGridLines="True">
-
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-                                <RowDefinition Height="1*" ></RowDefinition>
-
-                            </Grid.RowDefinitions>
-
-                            <Label>Imię</Label>
-                            <Label  Grid.Column="1">Drugie imię</Label>
-                            <Label  Grid.Column="2">Nazwisko</Label>
-                            <Label  Grid.Column="3">Nazwisko panieńskie matki</Label>
-                            <Label  Grid.Column="4">Imiona rodziców</Label>
-                            <Label  Grid.Column="5">Data urodzenia</Label>
-                            <Label  Grid.Column="6">Pesel</Label>
-                            <Label  Grid.Column="7">Zdjęcie</Label>
-                            <Label  Grid.Column="8">Płeć</Label>
-                            <Label  Grid.Column="9">Informacje o etacie</Label>
-                            <Label  Grid.Column="10">Opis stanowiska</Label>
-                            <Label  Grid.Column="11">Data zatrudnienia</Label>
-
-
-                            <TextBlock Name="imieP1" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="drugieImieP1" Grid.Column="1" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="nazwiskoP1" Grid.Column="2" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="panienskieNazwiskoP1" Grid.Column="3" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="imionaRodzicowP1" Grid.Column="4" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="datUrP1" Grid.Column="5" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="peselP1" Grid.Column="6" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="zdjP1" Grid.Column="7" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="plecP1" Grid.Column="8" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="etatP1" Grid.Column="9" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="OpisP1" Grid.Column="10" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="DataZatrudP1" Grid.Column="11" Grid.Row="1"></TextBlock>
-
-                            <TextBlock Name="imieP2" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="drugieImieP2" Grid.Column="1" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="nazwiskoP2" Grid.Column="2" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="panienskieNazwiskoP2" Grid.Column="3" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="imionaRodzicowP2" Grid.Column="4" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="datUrP2" Grid.Column="5" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="peselP2" Grid.Column="6" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="zdjP2" Grid.Column="7" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="plecP2" Grid.Column="8" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="etatP2" Grid.Column="9" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="OpisP2" Grid.Column="10" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="DataZatrudP2" Grid.Column="11" Grid.Row="1"></TextBlock>
-                            
-                            <TextBlock Name="imieP3" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="drugieImieP3" Grid.Column="1" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="nazwiskoP3" Grid.Column="2" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="panienskieNazwiskoP3" Grid.Column="3" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="imionaRodzicowP3" Grid.Column="4" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="datUrP3" Grid.Column="5" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="peselP3" Grid.Column="6" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="zdjP3" Grid.Column="7" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="plecP3" Grid.Column="8" Grid.Row="3"></TextBlock>
-                            <TextBlock Name="etatP3" Grid.Column="9" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="OpisP3" Grid.Column="10" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="DataZatrudP3" Grid.Column="11" Grid.Row="1"></TextBlock>
-
-                            <TextBlock Name="imieP4" Grid.Row="2"></TextBlock>
-                            <TextBlock Name="drugieImieP4" Grid.Column="1" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="nazwiskoP4" Grid.Column="2" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="panienskieNazwiskoP4" Grid.Column="3" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="imionaRodzicowP4" Grid.Column="4" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="datUrP4" Grid.Column="5" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="peselP4" Grid.Column="6" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="zdjP4" Grid.Column="7" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="plecP4" Grid.Column="8" Grid.Row="4"></TextBlock>
-                            <TextBlock Name="etatP4" Grid.Column="9" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="OpisP4" Grid.Column="10" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="DataZatrudP4" Grid.Column="11" Grid.Row="1"></TextBlock>
-
-                            <TextBlock Name="imieP5" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="drugieImieP5" Grid.Column="1" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="nazwiskoP5" Grid.Column="2" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="panienskieNazwiskoP5" Grid.Column="3" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="imionaRodzicowP5" Grid.Column="4" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="datUrP5" Grid.Column="5" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="peselP5" Grid.Column="6" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="zdjP5" Grid.Column="7" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="plecP5" Grid.Column="8" Grid.Row="5"></TextBlock>
-                            <TextBlock Name="etatP5" Grid.Column="9" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="OpisP5" Grid.Column="10" Grid.Row="1"></TextBlock>
-                            <TextBlock Name="DataZatrudP5" Grid.Column="11" Grid.Row="1"></TextBlock>
-                        </Grid>
+                        <DataGrid AutoGenerateColumns="False" CanUserAddRows="True" IsReadOnly="True" Name="listaPracownikow">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Imię"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Drugie Imię"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko panieńsie"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Imiona rodziców"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Data urodzenia"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Pesel"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Zdjęcie"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Płeć"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależność do klasy"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależnosć do grupy"></DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
                     </TabItem>
                 </TabControl>
             </StackPanel>
