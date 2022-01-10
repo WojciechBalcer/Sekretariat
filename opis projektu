@@ -1,0 +1,64 @@
+Wielki projekt z padu „Sekretariat szkoły”(wszystkie możliwości dotyczące projektu)
+
+Wprowadzanie danych uczniów, nauczycieli i pracowników obsługi.                    
+
+1. Uczeń  
+- [ ] Drugie imię
+- [ ] Nazwisko 
+- [ ] Nazwisko panieńskie (jeśli posiada je)
+- [ ] Imiona rodziców (lub opiekunów prawnych)
+- [ ] Data urodzenia (dd,mm,rrrr)
+- [ ] Pesel (11 cyfr)
+- [ ] Zdjęcie
+- [ ] Płeć (mężczyzna, kobieta, nie chce podawać)
+- [ ] Przynależność do klasy (lista)
+- [ ] Przynależność do grup(językowych, klasowych, międzyklasowych)
+- [ ] Imię (pierwsza litera duża, jeden wyraz, 20 liter max)
+
+   2. Nauczyciel
+- [ ] Imię
+- [ ] Drugie imię
+- [ ] Nazwisko
+- [ ] Nazwisko panieńskie
+- [ ] Imiona rodziców
+- [ ] Data urodzenia (nie starsza niż 65 lat (wiek emerytalny))
+- [ ] Pesel
+- [ ] Zdjęcie 
+- [ ] Płeć
+- [ ] Wychowawstwo (jeśli jest, lista)
+- [ ] Przedmioty nauczane (lista do wyboru, dodawanie przedmiotów po zapisaniu)
+- [ ] Klasy w których uczy z godzinami(?)
+- [ ] Data zatrudnienia 
+
+   3. Pracownicy obsługi
+- [ ] Imię 
+- [ ] Drugie imię
+- [ ] Nazwisko
+- [ ] Nazwisko panieńskie
+- [ ] Imiona rodziców
+- [ ] Data urodzenia
+- [ ] Pesel
+- [ ] Zdjęcie 
+- [ ] Płeć
+- [ ] Informację o etacie (cały etat, pół itp)
+- [ ] Opis stanowiska 
+- [ ] Data zatrudnienia 
+
+   Funkcjonowanie:
+- [ ] Wczytywanie danych z pliku tekstowego (bez zdjęć)
+- [ ] Wczytywanie zdjęć z pliku
+- [ ] Wyszukiwanie osób według wszystkich pól (klasa, ilość godzin zatrudnienia większa/mniejsza niż, osoby urodzone przed/po, płeć)
+- [ ] Sortowanie wyników
+- [ ] Generowanie raportów z wyszukiwania 
+- [ ] Zapisywanie raportów do pliku tekstowego (bez zdjęć)
+- [ ] Menu (dodaj/usuń ucznia/nauczyciela/pracownika obsługi, nauczyciele, uczniowie, pracownicy obsługi)
+- [ ] Pasek zadań (kopiuj, wklej, zaznacz, cofnij)
+- [ ] Edytowalne skróty klawiaturowe( tworzenie własnych skrótów)
+- [ ] Wprowadzanie i modyfikowanie danych z formularza
+        
+    Ocenianie:
+   
+- [ ] Ocena za projekt (opisanie możliwych rozwiązań, pokazanie projektu w postaci graficznej)
+- [ ] GUI (menu użytkownika w postaci graficznej)
+- [ ] Działanie aplikacji
+- [ ] Napisanie harmonogramu i zapisywanie wszystkiego na GitHub (każda poprawka)
