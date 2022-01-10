@@ -18,6 +18,7 @@ namespace Sekretariat
     public partial class MainWindow : Window
     {
         List<uczen> uczniowie;
+        List<nauczyciel> nauczyciele;
 
         int licznikUczniow = 0;
         int licznikNauczycieli = 0;
@@ -27,8 +28,10 @@ namespace Sekretariat
         {
             InitializeComponent();
             uczniowie = new List<uczen>();
+            nauczyciele = new List<nauczyciel>();
 
             listaUczniow.ItemsSource = uczniowie;
+            listaNauczycieli.ItemsSource = nauczyciele;
         }
         public class uczen
         {
@@ -44,16 +47,29 @@ namespace Sekretariat
             public string klasa { get; set; }
             public string grupa { get; set; }
         }
+        public class nauczyciel
+        {
+            public string imie { get; set; }
+            public string drugieImie { get; set; }
+            public string nazwisko { get; set; }
+            public string nazwiskoPanienskie { get; set; }
+            public string imionaRodzicow { get; set; }
+            public string dataUrodzenia { get; set; }
+            public string pesel { get; set; }
+            //public string zdjecie { get; set; }
+            public string plec { get; set; }
+            //public string klasa { get; set; }
+            //public string grupa { get; set; }
+        }
         //public void dodajU(object sender, RoutedEventArgs e)
         //{
 
-           // imie = textImie.Text;
+        // imie = textImie.Text;
         //}
-        
+
         private void dodajUcznia(object sender, RoutedEventArgs e)
         {
             licznikUczniow++;
-            licznikNauczycieli++;
 
             String imieUcznia = imieU.Text;
             String drugieImieUcznia = drugieImieU.Text;
@@ -78,7 +94,7 @@ namespace Sekretariat
             peselU.Text = " ";
             doKlasyU.Text = " ";
         }
-        /*
+        
         private void dodajNauczyciela(object sender, RoutedEventArgs e)
         {
             licznikNauczycieli++;
@@ -90,63 +106,9 @@ namespace Sekretariat
             String imionaRodzicowNauczyciela = imonaRodzicowN.Text;
             String dataUrodzeniaNauczyciela = dataUrodzeniaN.Text;
             String peselNauczyciela = peselN.Text;
+            nauczyciele.Add(new nauczyciel() { imie = imieNauczyciela, drugieImie = drugieImieNauczyciela, nazwisko = nazwiskoNauczyciela, nazwiskoPanienskie = nazwiskoPanieniskieNauczyciela, imionaRodzicow = imionaRodzicowNauczyciela, dataUrodzenia = dataUrodzeniaNauczyciela, pesel = peselNauczyciela }); 
 
 
-            if (licznikNauczycieli == 1)
-            {
-
-                imieN1.Text = imieNauczyciela;
-                drugieImieN1.Text = drugieImieNauczyciela;
-                nazwiskoN1.Text = nazwiskoNauczyciela;
-                panienskieNazwiskoN1.Text = nazwiskoPanieniskieNauczyciela;
-                imionaRodzicowN1.Text = imionaRodzicowNauczyciela;
-                datUrN1.Text = dataUrodzeniaNauczyciela;
-                peselN1.Text = peselNauczyciela;
-            }
-            if (licznikNauczycieli == 2)
-            {
-
-                imieN2.Text = imieNauczyciela;
-                drugieImieN2.Text = drugieImieNauczyciela;
-                nazwiskoN2.Text = nazwiskoNauczyciela;
-                panienskieNazwiskoN2.Text = nazwiskoPanieniskieNauczyciela;
-                imionaRodzicowN2.Text = imionaRodzicowNauczyciela;
-                datUrN2.Text = dataUrodzeniaNauczyciela;
-                peselN2.Text = peselNauczyciela;
-            }
-            if (licznikNauczycieli == 3)
-            {
-
-                imieN3.Text = imieNauczyciela;
-                drugieImieN3.Text = drugieImieNauczyciela;
-                nazwiskoN3.Text = nazwiskoNauczyciela;
-                panienskieNazwiskoN3.Text = nazwiskoPanieniskieNauczyciela;
-                imionaRodzicowN3.Text = imionaRodzicowNauczyciela;
-                datUrN3.Text = dataUrodzeniaNauczyciela;
-                peselN3.Text = peselNauczyciela;
-            }
-            if (licznikNauczycieli == 4)
-            {
-
-                imieN4.Text = imieNauczyciela;
-                drugieImieN4.Text = drugieImieNauczyciela;
-                nazwiskoN4.Text = nazwiskoNauczyciela;
-                panienskieNazwiskoN4.Text = nazwiskoPanieniskieNauczyciela;
-                imionaRodzicowN4.Text = imionaRodzicowNauczyciela;
-                datUrN4.Text = dataUrodzeniaNauczyciela;
-                peselN4.Text = peselNauczyciela;
-            }
-            if (licznikNauczycieli == 5)
-            {
-
-                imieN5.Text = imieNauczyciela;
-                drugieImieN5.Text = drugieImieNauczyciela;
-                nazwiskoN5.Text = nazwiskoNauczyciela;
-                panienskieNazwiskoN5.Text = nazwiskoPanieniskieNauczyciela;
-                imionaRodzicowN5.Text = imionaRodzicowNauczyciela;
-                datUrN5.Text = dataUrodzeniaNauczyciela;
-                peselN5.Text = peselNauczyciela;
-            }
             MessageBox.Show("Dodano nauczyciela " + licznikNauczycieli);
         }
         public void wyczyscNauczyciela(object sender, RoutedEventArgs e)
@@ -159,6 +121,7 @@ namespace Sekretariat
             dataUrodzeniaN.Text = " ";
             peselN.Text = " ";
         }
+        /*
         private void dodajPracownika(object sender, RoutedEventArgs e)
         {
             licznikPracownikow++;
