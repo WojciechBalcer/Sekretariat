@@ -19,14 +19,16 @@ namespace Sekretariat
     {
         List<uczen> uczniowie;
 
-        //int licznikUczniow = 0;
-        //int licznikNauczycieli = 0;
-        //int licznikPracownikow = 0;
+        int licznikUczniow = 0;
+        int licznikNauczycieli = 0;
+        int licznikPracownikow = 0;
 
         public MainWindow()
         {
             InitializeComponent();
             uczniowie = new List<uczen>();
+
+            listaUczniow.ItemsSource = uczniowie;
         }
         public class uczen
         {
@@ -37,19 +39,18 @@ namespace Sekretariat
             public string imionaRodzicow { get; set; }
             public string dataUrodzenia { get; set; }
             public string pesel { get; set; }
-            public string zdjecie { get; set; }
+            //public string zdjecie { get; set; }
             public string plec { get; set; }
             public string klasa { get; set; }
             public string grupa { get; set; }
         }
-        public void dodajU(object sender, RoutedEventArgs e)
-        {
+        //public void dodajU(object sender, RoutedEventArgs e)
+        //{
 
            // imie = textImie.Text;
-            //uczniowie.Add(new uczen() { Imie = imie, DrugieImie = drugieImie, Nazwisko = nazwisko, NazwiskoRodowe = nazwiskoRodowe, Pesel = pesel, Zdjecie = zdjecie, Plec = plec[0], ImieMatki = imieMatki, ImieOjca = imieOjca, DataUrodzenia = dataUrodzenia, Klasa = klasa, Grupy = grupy });
-        }
+        //}
         
-        /*private void dodajUcznia(object sender, RoutedEventArgs e)
+        private void dodajUcznia(object sender, RoutedEventArgs e)
         {
             licznikUczniow++;
             licznikNauczycieli++;
@@ -62,73 +63,11 @@ namespace Sekretariat
             String dataUrodzeniaUcznia = dataUrodzeniaU.Text;
             String peselUcznia = peselU.Text;
             String klasaUcznia = doKlasyU.Text;
-
-
-            if (licznikUczniow == 1)
-            {
-
-                imieU1.Text = imieUcznia;
-                drugieImieU1.Text = drugieImieUcznia;
-                nazwiskoU1.Text = nazwiskoUcznia;
-                panienskieNazwiskoU1.Text = nazwiskoPanieniskieUcznia;
-                imionaRodzicowU1.Text = imionaRodzicowUcznia;
-                datUrU1.Text = dataUrodzeniaUcznia;
-                peselU1.Text = peselUcznia;
-                klasaU1.Text = klasaUcznia;
-            }
-            if (licznikUczniow == 2)
-            {
-
-                imieU2.Text = imieUcznia;
-                drugieImieU2.Text = drugieImieUcznia;
-                nazwiskoU2.Text = nazwiskoUcznia;
-                panienskieNazwiskoU2.Text = nazwiskoPanieniskieUcznia;
-                imionaRodzicowU2.Text = imionaRodzicowUcznia;
-                datUrU2.Text = dataUrodzeniaUcznia;
-                peselU2.Text = peselUcznia;
-                klasaU2.Text = klasaUcznia;
-            }
-            if (licznikUczniow == 3)
-            {
-
-                imieU3.Text = imieUcznia;
-                drugieImieU3.Text = drugieImieUcznia;
-                nazwiskoU3.Text = nazwiskoUcznia;
-                panienskieNazwiskoU3.Text = nazwiskoPanieniskieUcznia;
-                imionaRodzicowU3.Text = imionaRodzicowUcznia;
-                datUrU3.Text = dataUrodzeniaUcznia;
-                peselU3.Text = peselUcznia;
-                klasaU3.Text = klasaUcznia;
-            }
-            if (licznikUczniow == 4)
-            {
-
-                imieU4.Text = imieUcznia;
-                drugieImieU4.Text = drugieImieUcznia;
-                nazwiskoU4.Text = nazwiskoUcznia;
-                panienskieNazwiskoU4.Text = nazwiskoPanieniskieUcznia;
-                imionaRodzicowU4.Text = imionaRodzicowUcznia;
-                datUrU4.Text = dataUrodzeniaUcznia;
-                peselU4.Text = peselUcznia;
-                klasaU4.Text = klasaUcznia;
-            }
-            if (licznikUczniow == 5)
-            {
-
-                imieU5.Text = imieUcznia;
-                drugieImieU5.Text = drugieImieUcznia;
-                nazwiskoU5.Text = nazwiskoUcznia;
-                panienskieNazwiskoU5.Text = nazwiskoPanieniskieUcznia;
-                imionaRodzicowU5.Text = imionaRodzicowUcznia;
-                datUrU5.Text = dataUrodzeniaUcznia;
-                peselU5.Text = peselUcznia;
-                klasaU5.Text = klasaUcznia;
-            }
-
+            uczniowie.Add(new uczen() { imie = imieUcznia, drugieImie = drugieImieUcznia, nazwisko = nazwiskoUcznia, nazwiskoPanienskie = nazwiskoPanieniskieUcznia, imionaRodzicow = imionaRodzicowUcznia,  dataUrodzenia = dataUrodzeniaUcznia, pesel = peselUcznia, klasa = klasaUcznia }); ;
 
             MessageBox.Show("Dodano ucznia" + licznikUczniow);
         }
-        /*public void wyczyscUcznia(object sender, RoutedEventArgs e)
+        public void wyczyscUcznia(object sender, RoutedEventArgs e)
         {
             imieU.Text = " ";
             drugieImieU.Text = " ";
@@ -139,6 +78,7 @@ namespace Sekretariat
             peselU.Text = " ";
             doKlasyU.Text = " ";
         }
+        /*
         private void dodajNauczyciela(object sender, RoutedEventArgs e)
         {
             licznikNauczycieli++;
