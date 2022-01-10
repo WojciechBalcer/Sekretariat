@@ -17,7 +17,7 @@ namespace Sekretariat
 {
     public partial class MainWindow : Window
     {
-        
+        List<uczen> uczniowie;
 
         //int licznikUczniow = 0;
         //int licznikNauczycieli = 0;
@@ -26,7 +26,27 @@ namespace Sekretariat
         public MainWindow()
         {
             InitializeComponent();
-          
+            uczniowie = new List<uczen>();
+        }
+        public class uczen
+        {
+            public string imie { get; set; }
+            public string drugieImie { get; set; }
+            public string nazwisko { get; set; }
+            public string nazwiskoPanienskie { get; set; }
+            public string imionaRodzicow { get; set; }
+            public string dataUrodzenia { get; set; }
+            public string pesel { get; set; }
+            public string zdjecie { get; set; }
+            public string plec { get; set; }
+            public string klasa { get; set; }
+            public string grupa { get; set; }
+        }
+        public void dodajU(object sender, RoutedEventArgs e)
+        {
+
+           // imie = textImie.Text;
+            //uczniowie.Add(new uczen() { Imie = imie, DrugieImie = drugieImie, Nazwisko = nazwisko, NazwiskoRodowe = nazwiskoRodowe, Pesel = pesel, Zdjecie = zdjecie, Plec = plec[0], ImieMatki = imieMatki, ImieOjca = imieOjca, DataUrodzenia = dataUrodzenia, Klasa = klasa, Grupy = grupy });
         }
         
         /*private void dodajUcznia(object sender, RoutedEventArgs e)

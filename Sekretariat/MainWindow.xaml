@@ -6,27 +6,34 @@
         xmlns:local="clr-namespace:Sekretariat"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="1200">
-    <Grid>
-        <DockPanel>
 
-            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+
+
+    <DockPanel>   
                 <TabControl Name="tabCtr">
                     <TabItem Header="Dodaj ucznia">
-                        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" Name="dodajUcznia">
+                        <DataGrid AutoGenerateColumns="False" CanUserAddRows="True" Name="dodajUcznia">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Imię"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Drugie Imię"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Nazwisko"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Nazwisko panieńsie"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Imiona rodziców"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Data urodzenia"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Pesel"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Zdjęcie"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Płeć"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Przynależność do klasy"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Przynależnosć do grupy"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Imię" x:Name="textImie"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Drugie Imię" x:Name="textDrugieImie"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko" x:Name="textNazwisko"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko panieńsie" x:Name="textNazwiskoPanienskie"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Imiona rodziców" x:Name="textimonaRodzicow"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Data urodzenia" x:Name="textDataUrodzenia"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Pesel" x:Name="textPesel"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Zdjęcie" x:Name="textZdjecie"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Płeć" x:Name="textPlec"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależność do klasy" x:Name="textKlasa"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależnosć do grupy" x:Name="textGrupa"></DataGridTextColumn>
                             </DataGrid.Columns>
+                            
+                        <ToolBarTray>
+                            <ToolBar>
+                                <Button Click="dodajU">dodaj</Button>
+                            </ToolBar>
+                        </ToolBarTray>
                         </DataGrid>
+                    
                     </TabItem>
                     <TabItem Header="Dodaj nauczyciela">
                         <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" Name="dodajNauczyciela">
@@ -63,19 +70,19 @@
                         </DataGrid>
                     </TabItem>
                     <TabItem Header="Uczniowie">
-                        <DataGrid AutoGenerateColumns="False" CanUserAddRows="True" IsReadOnly="True" Name="listaUczniow">
+                        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="False" Name="listaUczniow">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Imię"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Drugie Imię"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Nazwisko"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Nazwisko panieńsie"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Imiona rodziców"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Data urodzenia"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Pesel"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Zdjęcie"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Płeć"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Przynależność do klasy"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Przynależnosć do grupy"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Imię" Binding="{Binding imie}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Drugie Imię" Binding="{Binding drugieImie}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko" Binding="{Binding nazwisko}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko panieńsie" Binding="{Binding nazwiskoPanienskie}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Imiona rodziców" Binding="{Binding imionaRodzicow}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Data urodzenia" Binding="{Binding dataUrodzenia}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Pesel" Binding="{Binding Pesel}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Zdjęcie" Binding="{Binding zdjecie}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Płeć" Binding="{Binding plec}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależność do klasy" Binding="{Binding klasa}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależnosć do grupy" Binding="{Binding grupa}"></DataGridTextColumn>
                             </DataGrid.Columns>
                         </DataGrid>
                     </TabItem>
@@ -114,7 +121,7 @@
                         </DataGrid>
                     </TabItem>
                 </TabControl>
-            </StackPanel>
-        </DockPanel>
-    </Grid>
+            </DockPanel>
+        
+   
 </Window>
