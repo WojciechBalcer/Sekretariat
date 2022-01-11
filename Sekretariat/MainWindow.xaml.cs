@@ -83,7 +83,8 @@ namespace Sekretariat
 
         private void dodajUcznia(object sender, RoutedEventArgs e)
         {
-            licznikUczniow++;
+
+        licznikUczniow++;
 
             String imieUcznia = imieU.Text;
             String drugieImieUcznia = drugieImieU.Text;
@@ -92,8 +93,11 @@ namespace Sekretariat
             String imionaRodzicowUcznia = imonaRodzicowU.Text;
             String dataUrodzeniaUcznia = dataUrodzeniaU.Text;
             String peselUcznia = peselU.Text;
+            //BitmapImage zdjecieUcznia = zdjecieU.Text;
+            String plecUcznia = plecU.Text;
             String klasaUcznia = doKlasyU.Text;
-            uczniowie.Add(new uczen() { imie = imieUcznia, drugieImie = drugieImieUcznia, nazwisko = nazwiskoUcznia, nazwiskoPanienskie = nazwiskoPanieniskieUcznia, imionaRodzicow = imionaRodzicowUcznia,  dataUrodzenia = dataUrodzeniaUcznia, pesel = peselUcznia, klasa = klasaUcznia }); ;
+            String grupaUcznia = doGrupyU.Text;
+            uczniowie.Add(new uczen() { imie = imieUcznia, drugieImie = drugieImieUcznia, nazwisko = nazwiskoUcznia, nazwiskoPanienskie = nazwiskoPanieniskieUcznia, imionaRodzicow = imionaRodzicowUcznia, dataUrodzenia = dataUrodzeniaUcznia, pesel = peselUcznia, plec = plecUcznia, klasa = klasaUcznia, grupa = grupaUcznia }) ;
 
             MessageBox.Show("Dodano ucznia" + licznikUczniow);
         }
