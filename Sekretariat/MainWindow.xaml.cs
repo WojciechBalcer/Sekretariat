@@ -44,7 +44,7 @@ namespace Sekretariat
             public string imionaRodzicow { get; set; }
             public string dataUrodzenia { get; set; }
             public string pesel { get; set; }
-            //public string zdjecie { get; set; }
+            public string zdjecie { get; set; }
             public string plec { get; set; }
             public string klasa { get; set; }
             public string grupa { get; set; }
@@ -58,10 +58,11 @@ namespace Sekretariat
             public string imionaRodzicow { get; set; }
             public string dataUrodzenia { get; set; }
             public string pesel { get; set; }
-            //public string zdjecie { get; set; }
+            public string zdjecie { get; set; }
             public string plec { get; set; }
-            //public string klasa { get; set; }
-            //public string grupa { get; set; }
+            public string wychowawstwo { get; set; }
+            public string nauczanePrzedmioty { get; set; }
+            public string dataZatrudnienia { get; set; }
         }
         public class pracownik
         {
@@ -72,10 +73,11 @@ namespace Sekretariat
             public string imionaRodzicow { get; set; }
             public string dataUrodzenia { get; set; }
             public string pesel { get; set; }
-            //public string zdjecie { get; set; }
+            public string zdjecie { get; set; }
             public string plec { get; set; }
-            //public string klasa { get; set; }
-            //public string grupa { get; set; }
+            public string etat { get; set; }
+            public string opis { get; set; }
+            public string dataZatrudnienia { get; set; }
         }
         
 
