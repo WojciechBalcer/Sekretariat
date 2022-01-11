@@ -171,8 +171,8 @@
                         <TextBox Grid.Row="2" Grid.Column="11" Name="Opis"></TextBox>
                         <Label Grid.Column="12">Data zatrudnienia</Label>
                         <TextBox Grid.Row="2" Grid.Column="12" Name="DataZatrudnienaP"></TextBox>
-                        <Button Grid.Column="14" Grid.Row="1" Click="dodajPracownika">dodaj pracownika</Button>
-                        <Button Grid.Column="13" Grid.Row="1" Click="wyczyscPracownika">Wyczyść</Button>
+                        <Button Grid.Column="14" Grid.Row="1" Name="dodajPracownika">dodaj pracownika</Button>
+                        <Button Grid.Column="13" Grid.Row="1" Name="wyczyscPracownika">Wyczyść</Button>
                     </Grid>
 
                 </Grid>

@@ -110,7 +110,9 @@ namespace Sekretariat
             imonaRodzicowU.Text = " ";
             dataUrodzeniaU.Text = " ";
             peselU.Text = " ";
+            plecU.Text = " ";
             doKlasyU.Text = " ";
+            doGrupyU.Text = " ";
         }
         
         private void dodajNauczyciela(object sender, RoutedEventArgs e)
