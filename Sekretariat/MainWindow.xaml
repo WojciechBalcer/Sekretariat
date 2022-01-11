@@ -206,8 +206,9 @@
                                 <DataGridTextColumn Header="Pesel" Binding="{Binding pesel}"></DataGridTextColumn>
                                 <DataGridTextColumn Header="Zdjęcie" Binding="{Binding zdjecie}"></DataGridTextColumn>
                                 <DataGridTextColumn Header="Płeć" Binding="{Binding plec}"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Wychowawstwo" Binding="{Binding plec}"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Przynależność do klasy" Binding="{Binding klasa}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Wychowawstwo" Binding="{Binding wychowawstwo}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przedmioty Nauczane" Binding="{Binding nauczanePrzedmioty}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Data Zatrudnienia" Binding="{Binding dataZatrudnienia}"></DataGridTextColumn>
                     </DataGrid.Columns>
                         </DataGrid>
                     </TabItem>
@@ -223,8 +224,10 @@
                                 <DataGridTextColumn Header="Pesel" Binding="{Binding pesel}"></DataGridTextColumn>
                                 <DataGridTextColumn Header="Zdjęcie" Binding="{Binding zdjecie}"></DataGridTextColumn>
                                 <DataGridTextColumn Header="Płeć" Binding="{Binding plec}"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Przynależność do klasy" Binding="{Binding klasa}"></DataGridTextColumn>
-                            </DataGrid.Columns>
+                                <DataGridTextColumn Header="Informacje o etacie" Binding="{Binding etat}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Opis stanowiska" Binding="{Binding opis}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Data zatrudnienia" Binding="{Binding dataZatrudnienia}"></DataGridTextColumn>
+                    </DataGrid.Columns>
                         </DataGrid>
                     </TabItem>
                 </TabControl>
