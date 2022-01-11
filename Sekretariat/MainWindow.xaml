@@ -123,22 +123,60 @@
                 </Grid>
             </TabItem>
                     <TabItem Header="Dodaj pracownika">
-                        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" Name="dodajPracownika">
-                            <DataGrid.Columns>
-                                <DataGridTextColumn Header="Imię"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Drugie Imię"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Nazwisko"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Nazwisko panieńsie"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Imiona rodziców"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Data urodzenia"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Pesel"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Zdjęcie"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Płeć"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Przynależność do klasy"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Przynależnosć do grupy"></DataGridTextColumn>
-                            </DataGrid.Columns>
-                        </DataGrid>
-                    </TabItem>
+                <Grid>
+                    <Grid ShowGridLines="True">
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"></RowDefinition>
+                            <RowDefinition Height="50"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="1">Imię</Label>
+                        <TextBox Grid.Row="2" Grid.Column="1" Name="imieP"></TextBox>
+                        <Label Grid.Column="2">Drugie imię</Label>
+                        <TextBox Grid.Row="2" Grid.Column="2" Name="drugieImieP"></TextBox>
+                        <Label Grid.Column="3">Nazwisko</Label>
+                        <TextBox Grid.Row="2" Grid.Column="3" Name="nazwiskoP"></TextBox>
+                        <Label Grid.Column="4">Nazwisko panieńskie</Label>
+                        <TextBox Grid.Row="2" Grid.Column="4" Name="nazwiskoPanienskieP"></TextBox>
+                        <Label Grid.Column="5">Imiona rodziców</Label>
+                        <TextBox Grid.Row="2" Grid.Column="5" Name="imonaRodzicowP"></TextBox>
+                        <Label Grid.Column="6">Data urodzenia</Label>
+                        <TextBox Grid.Row="2" Grid.Column="6" Name="dataUrodzeniaP"></TextBox>
+                        <Label Grid.Column="7">Pesel</Label>
+                        <TextBox Grid.Row="2" Grid.Column="7" Name="peselP"></TextBox>
+                        <Label Grid.Column="8">Zdjęcie</Label>
+                        <TextBox Grid.Row="2" Grid.Column="8" Name="zdjecieP"></TextBox>
+                        <Label Grid.Column="9">Płeć</Label>
+                        <TextBox Grid.Row="2" Grid.Column="9" Name="plecP"></TextBox>
+                        <Label Grid.Column="10">Informacje o etacie</Label>
+                        <TextBox Grid.Row="2" Grid.Column="10" Name="etat"></TextBox>
+                        <Label Grid.Column="11">Opis stanowiska</Label>
+                        <TextBox Grid.Row="2" Grid.Column="11" Name="Opis"></TextBox>
+                        <Label Grid.Column="12">Data zatrudnienia</Label>
+                        <TextBox Grid.Row="2" Grid.Column="12" Name="DataZatrudnienaP"></TextBox>
+                        <Button Grid.Column="14" Grid.Row="1" Click="dodajPracownika">dodaj pracownika</Button>
+                        <Button Grid.Column="13" Grid.Row="1" Click="wyczyscPracownika">Wyczyść</Button>
+                    </Grid>
+
+                </Grid>
+            </TabItem>
                     <TabItem Header="Uczniowie">
                         <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="False" Name="listaUczniow">
                             <DataGrid.Columns>
@@ -168,24 +206,24 @@
                                 <DataGridTextColumn Header="Pesel" Binding="{Binding pesel}"></DataGridTextColumn>
                                 <DataGridTextColumn Header="Zdjęcie" Binding="{Binding zdjecie}"></DataGridTextColumn>
                                 <DataGridTextColumn Header="Płeć" Binding="{Binding plec}"></DataGridTextColumn>
-                        <DataGridTextColumn Header="Przynależność do klasy" Binding="{Binding klasa}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Wychowawstwo" Binding="{Binding plec}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależność do klasy" Binding="{Binding klasa}"></DataGridTextColumn>
                     </DataGrid.Columns>
                         </DataGrid>
                     </TabItem>
                     <TabItem Header="Pracownicy">
                         <DataGrid AutoGenerateColumns="False" CanUserAddRows="True" IsReadOnly="True" Name="listaPracownikow">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Imię"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Drugie Imię"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Nazwisko"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Nazwisko panieńsie"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Imiona rodziców"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Data urodzenia"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Pesel"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Zdjęcie"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Płeć"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Przynależność do klasy"></DataGridTextColumn>
-                                <DataGridTextColumn Header="Przynależnosć do grupy"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Imię" Binding="{Binding imie}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Drugie Imię" Binding="{Binding drugieImie}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko" Binding="{Binding nazwisko}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Nazwisko panieńsie" Binding="{Binding nazwiskoPanienskie}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Imiona rodziców" Binding="{Binding imionaRodzicow}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Data urodzenia" Binding="{Binding dataUrodzenia}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Pesel" Binding="{Binding pesel}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Zdjęcie" Binding="{Binding zdjecie}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Płeć" Binding="{Binding plec}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Przynależność do klasy" Binding="{Binding klasa}"></DataGridTextColumn>
                             </DataGrid.Columns>
                         </DataGrid>
                     </TabItem>

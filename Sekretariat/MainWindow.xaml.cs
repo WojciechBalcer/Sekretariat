@@ -19,6 +19,7 @@ namespace Sekretariat
     {
         List<uczen> uczniowie;
         List<nauczyciel> nauczyciele;
+        List<pracownik> pracownicy;
 
         int licznikUczniow = 0;
         int licznikNauczycieli = 0;
@@ -29,6 +30,7 @@ namespace Sekretariat
             InitializeComponent();
             uczniowie = new List<uczen>();
             nauczyciele = new List<nauczyciel>();
+            pracownicy = new List<pracownik>();
 
             listaUczniow.ItemsSource = uczniowie;
             listaNauczycieli.ItemsSource = nauczyciele;
@@ -61,11 +63,21 @@ namespace Sekretariat
             //public string klasa { get; set; }
             //public string grupa { get; set; }
         }
-        //public void dodajU(object sender, RoutedEventArgs e)
-        //{
-
-        // imie = textImie.Text;
-        //}
+        public class pracownik
+        {
+            public string imie { get; set; }
+            public string drugieImie { get; set; }
+            public string nazwisko { get; set; }
+            public string nazwiskoPanienskie { get; set; }
+            public string imionaRodzicow { get; set; }
+            public string dataUrodzenia { get; set; }
+            public string pesel { get; set; }
+            //public string zdjecie { get; set; }
+            public string plec { get; set; }
+            //public string klasa { get; set; }
+            //public string grupa { get; set; }
+        }
+        
 
         private void dodajUcznia(object sender, RoutedEventArgs e)
         {
