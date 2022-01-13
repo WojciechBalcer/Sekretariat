@@ -36,6 +36,10 @@ namespace Sekretariat
             dataUrodzeniaU.DisplayDateEnd = System.DateTime.Today.AddYears(-14);
             dataUrodzeniaP.DisplayDateEnd = System.DateTime.Today.AddYears(-25);
 
+            peselN.MaxLength = 11;
+            peselP.MaxLength = 11;
+            peselU.MaxLength = 11;
+
             uczniowie = new List<uczen>();
             nauczyciele = new List<nauczyciel>();
             pracownicy = new List<pracownik>();
