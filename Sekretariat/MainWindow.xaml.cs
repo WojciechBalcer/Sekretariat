@@ -117,18 +117,7 @@ namespace Sekretariat
         
         private void dodajNauczyciela(object sender, RoutedEventArgs e)
         {
-            /*public string imie { get; set; }
-        public string drugieImie { get; set; }
-        public string nazwisko { get; set; }
-        public string nazwiskoPanienskie { get; set; }
-        public string imionaRodzicow { get; set; }
-        public string dataUrodzenia { get; set; }
-        public string pesel { get; set; }
-        public string zdjecie { get; set; }
-        public string plec { get; set; }
-        public string wychowawstwo { get; set; }
-        public string nauczanePrzedmioty { get; set; }
-        public string dataZatrudnienia { get; set; }*/
+            
         licznikNauczycieli++;
 
             String imieNauczyciela = imieN.Text;
@@ -140,10 +129,10 @@ namespace Sekretariat
             String peselNauczyciela = peselN.Text;
             String zdjecieNauczyciela = zdjecieN.Text;
             String plecNauczyciela = plecN.Text;
-            String wychowawstwo = WychowawstwoN.Text;
-            String nauczanePrzedmioty = przedmiotyNauczania.Text;
+            String wychowawstwoNauczyciela = WychowawstwoN.Text;
+            String nauczanePrzedmiotyNauczyciela = przedmiotyNauczania.Text;
             String dataZatrudnieniaNauczyciela = DataZatrudnienaN.Text;
-            nauczyciele.Add(new nauczyciel() { imie = imieNauczyciela, drugieImie = drugieImieNauczyciela, nazwisko = nazwiskoNauczyciela, nazwiskoPanienskie = nazwiskoPanieniskieNauczyciela, imionaRodzicow = imionaRodzicowNauczyciela, dataUrodzenia = dataUrodzeniaNauczyciela, pesel = peselNauczyciela }); 
+            nauczyciele.Add(new nauczyciel() { dataZatrudnienia = dataZatrudnieniaNauczyciela, nauczanePrzedmioty = nauczanePrzedmiotyNauczyciela, wychowawstwo = wychowawstwoNauczyciela, plec = plecNauczyciela, imie = imieNauczyciela, drugieImie = drugieImieNauczyciela, nazwisko = nazwiskoNauczyciela, nazwiskoPanienskie = nazwiskoPanieniskieNauczyciela, imionaRodzicow = imionaRodzicowNauczyciela, dataUrodzenia = dataUrodzeniaNauczyciela, pesel = peselNauczyciela }); 
 
 
             MessageBox.Show("Dodano nauczyciela " + licznikNauczycieli);
