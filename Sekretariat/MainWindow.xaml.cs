@@ -40,6 +40,22 @@ namespace Sekretariat
             peselP.MaxLength = 11;
             peselU.MaxLength = 11;
 
+            imieN.MaxLength = 20;
+            imieU.MaxLength = 20;
+            imieP.MaxLength = 20;
+
+            drugieImieN.MaxLength = 20;
+            drugieImieU.MaxLength = 20;
+            drugieImieP.MaxLength = 20;
+
+            nazwiskoN.MaxLength = 20;
+            nazwiskoP.MaxLength = 20;
+            nazwiskoU.MaxLength = 20;
+
+            nazwiskoPanienskieN.MaxLength = 20;
+            nazwiskoPanienskieU.MaxLength = 20;
+            nazwiskoPanienskieP.MaxLength = 20;
+
             uczniowie = new List<uczen>();
             nauczyciele = new List<nauczyciel>();
             pracownicy = new List<pracownik>();
