@@ -146,6 +146,11 @@ namespace Sekretariat
             imonaRodzicowN.Text = " ";
             dataUrodzeniaN.Text = " ";
             peselN.Text = " ";
+            plecN.Text = " ";
+            WychowawstwoN.Text = " ";
+            przedmiotyNauczania.Text = " ";
+            DataZatrudnienaN.Text = " ";
+
         }
         /*
         private void dodajPracownika(object sender, RoutedEventArgs e)
