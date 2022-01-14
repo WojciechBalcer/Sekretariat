@@ -50,12 +50,32 @@ namespace Sekretariat
 
             plecN.Items.Add("męższczyzna");
             plecN.Items.Add("kobieta");
+            plecN.Items.Add("nie chce podawać");
 
             plecU.Items.Add("męższczyzna");
             plecU.Items.Add("kobieta");
+            plecU.Items.Add("nie chce podawać");
 
             plecP.Items.Add("męższczyzna");
             plecP.Items.Add("kobieta");
+            plecP.Items.Add("nie chce podawać");
+
+            etat.Items.Add("pełen etat");
+            etat.Items.Add("1/2 etatu");
+            etat.Items.Add("1/4 etatu");
+            etat.Items.Add("1/8 etatu");
+            etat.Items.Add("3/8 etatu");
+            etat.Items.Add("5/8 etatu");
+            etat.Items.Add("7/8 etatu");
+            etat.Items.Add("3/4 etatu");
+            etat.Items.Add("1/3 etatu");
+            etat.Items.Add("2/3 etatu");
+            etat.Items.Add("1/5 etatu");
+            etat.Items.Add("2/5 etatu");
+            etat.Items.Add("3/5 etatu");
+            etat.Items.Add("4/5 etatu");
+
+            etat.Items.Add("etatu");
 
             WychowawstwoN.Items.Add("IA");
             WychowawstwoN.Items.Add("IB");
@@ -111,8 +131,16 @@ namespace Sekretariat
             przedmiotyNauczania.Items.Add("Biologia");
             przedmiotyNauczania.Items.Add("Fizyka");
 
-            
-            
+
+            doGrupyU.Items.Add("pierwsza grupa językowa");
+            doGrupyU.Items.Add("druga grupa językowa");
+            doGrupyU.Items.Add("kółko teatralne");
+            doGrupyU.Items.Add("kółko matematyczne");
+            doGrupyU.Items.Add("kółko przyrodnicze");
+            doGrupyU.Items.Add("kółko fotograficzne");
+            doGrupyU.Items.Add("SKS-y");
+            doGrupyU.Items.Add("kółko meterologiczne");
+            doGrupyU.Items.Add("kółko medyczne");
 
             peselN.MaxLength = 11;
             peselP.MaxLength = 11;
@@ -203,7 +231,13 @@ namespace Sekretariat
             //BitmapImage zdjecieUcznia = zdjecieU.Text;
             String plecUcznia = plecU.Text;
             String klasaUcznia = doKlasyU.Text;
-            String grupaUcznia = doGrupyU.Text;
+            String grupaUcznia = "";
+
+            foreach (var Item in doGrupyU.SelectedItems)
+            {
+                grupaUcznia +=  Item.ToString()+", " ;
+            }
+
             uczniowie.Add(new uczen() { imie = imieUcznia, drugieImie = drugieImieUcznia, nazwisko = nazwiskoUcznia, nazwiskoPanienskie = nazwiskoPanieniskieUcznia, imionaRodzicow = imionaRodzicowUcznia, dataUrodzenia = dataUrodzeniaUcznia, pesel = peselUcznia, plec = plecUcznia , klasa = klasaUcznia, grupa = grupaUcznia }) ;
 
             MessageBox.Show("Dodano ucznia" + licznikUczniow);
@@ -217,7 +251,6 @@ namespace Sekretariat
             imonaRodzicowU.Text = " ";
             peselU.Text = " ";
             doKlasyU.Text = " ";
-            doGrupyU.Text = " ";
         }
         
         private void dodajNauczyciela(object sender, RoutedEventArgs e)
@@ -240,7 +273,7 @@ namespace Sekretariat
 
             foreach(var Item in przedmiotyNauczania.SelectedItems)
             {
-                nauczanePrzedmiotyNauczyciela += " " + Item.ToString();
+                nauczanePrzedmiotyNauczyciela += Item.ToString()+", " ;
             }
 
             nauczyciele.Add(new nauczyciel() { dataZatrudnienia = dataZatrudnieniaNauczyciela, nauczanePrzedmioty = nauczanePrzedmiotyNauczyciela, wychowawstwo = wychowawstwoNauczyciela, plec = plecNauczyciela, imie = imieNauczyciela, drugieImie = drugieImieNauczyciela, nazwisko = nazwiskoNauczyciela, nazwiskoPanienskie = nazwiskoPanieniskieNauczyciela, imionaRodzicow = imionaRodzicowNauczyciela, dataUrodzenia = dataUrodzeniaNauczyciela, pesel = peselNauczyciela }); 
