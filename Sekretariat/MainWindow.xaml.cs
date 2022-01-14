@@ -328,5 +328,23 @@ namespace Sekretariat
             etat.Text = " ";
             Opis.Text = " ";
         }
+        private void zapisz(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.SaveFileDialog dlg = new Microsoft.Win32.SaveFileDialog();
+            dlg.FileName = "Document"; 
+            dlg.DefaultExt = ".txt"; 
+            dlg.Filter = "Text documents (.txt)|*.txt"; 
+
+            // Show save file dialog box
+            Nullable<bool> result = dlg.ShowDialog();
+
+            // Process save file dialog box results
+            if (result == true)
+            {
+                // Save document
+                string i = "lubie placki";
+                    i = dlg.FileName;
+            }
+        }
     }
 }
