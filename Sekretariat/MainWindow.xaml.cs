@@ -57,6 +57,61 @@ namespace Sekretariat
             plecP.Items.Add("męższczyzna");
             plecP.Items.Add("kobieta");
 
+            WychowawstwoN.Items.Add("IA");
+            WychowawstwoN.Items.Add("IB");
+            WychowawstwoN.Items.Add("IC");
+            WychowawstwoN.Items.Add("ID");
+            WychowawstwoN.Items.Add("IE");
+            WychowawstwoN.Items.Add("IIA");
+            WychowawstwoN.Items.Add("IIB");
+            WychowawstwoN.Items.Add("IIC");
+            WychowawstwoN.Items.Add("IID");
+            WychowawstwoN.Items.Add("IIE");
+            WychowawstwoN.Items.Add("IIIA");
+            WychowawstwoN.Items.Add("IIIB");
+            WychowawstwoN.Items.Add("IIIC");
+            WychowawstwoN.Items.Add("IIID");
+            WychowawstwoN.Items.Add("IIIE");
+            WychowawstwoN.Items.Add("IVA");
+            WychowawstwoN.Items.Add("IVB");
+            WychowawstwoN.Items.Add("IVC");
+            WychowawstwoN.Items.Add("IVD");
+            WychowawstwoN.Items.Add("IVE");
+
+            doKlasyU.Items.Add("IA");
+            doKlasyU.Items.Add("IB");
+            doKlasyU.Items.Add("IC");
+            doKlasyU.Items.Add("ID");
+            doKlasyU.Items.Add("IE");
+            doKlasyU.Items.Add("IIA");
+            doKlasyU.Items.Add("IIB");
+            doKlasyU.Items.Add("IIC");
+            doKlasyU.Items.Add("IID");
+            doKlasyU.Items.Add("IIE");
+            doKlasyU.Items.Add("IIIA");
+            doKlasyU.Items.Add("IIIB");
+            doKlasyU.Items.Add("IIIC");
+            doKlasyU.Items.Add("IIID");
+            doKlasyU.Items.Add("IIIE");
+            doKlasyU.Items.Add("IVA");
+            doKlasyU.Items.Add("IVB");
+            doKlasyU.Items.Add("IVC");
+            doKlasyU.Items.Add("IVD");
+            doKlasyU.Items.Add("IVE");
+
+
+            przedmiotyNauczania.Items.Add("Matematyka");
+            przedmiotyNauczania.Items.Add("Informatyka");
+            przedmiotyNauczania.Items.Add("Polski");
+            przedmiotyNauczania.Items.Add("Angielski");
+            przedmiotyNauczania.Items.Add("Niemiecki");
+            przedmiotyNauczania.Items.Add("Wf");
+            przedmiotyNauczania.Items.Add("Historia");
+            przedmiotyNauczania.Items.Add("EDB");
+            przedmiotyNauczania.Items.Add("Biologia");
+            przedmiotyNauczania.Items.Add("Fizyka");
+
+            
             
 
             peselN.MaxLength = 11;
@@ -97,8 +152,8 @@ namespace Sekretariat
             public string pesel { get; set; }
             public string zdjecie { get; set; }
             public String plec { get; set; }
-            public string klasa { get; set; }
-            public string grupa { get; set; }
+            public String klasa { get; set; }
+            public String grupa { get; set; }
         }
         public class nauczyciel
         {
@@ -111,8 +166,8 @@ namespace Sekretariat
             public string pesel { get; set; }
             public string zdjecie { get; set; }
             public String plec { get; set; }
-            public string wychowawstwo { get; set; }
-            public string nauczanePrzedmioty { get; set; }
+            public String wychowawstwo { get; set; }
+            public ListBox nauczanePrzedmioty { get; set; }
             public String dataZatrudnienia { get; set; }
         }
         public class pracownik
@@ -126,7 +181,7 @@ namespace Sekretariat
             public string pesel { get; set; }
             public string zdjecie { get; set; }
             public String plec { get; set; }
-            public string etat { get; set; }
+            public String etat { get; set; }
             public string opis { get; set; }
             public String dataZatrudnienia { get; set; }
         }
@@ -179,7 +234,7 @@ namespace Sekretariat
             String zdjecieNauczyciela = zdjecieN.Text;
             String plecNauczyciela = plecN.Text;
             String wychowawstwoNauczyciela = WychowawstwoN.Text;
-            String nauczanePrzedmiotyNauczyciela = przedmiotyNauczania.Text;
+            ListBox nauczanePrzedmiotyNauczyciela = przedmiotyNauczania;
             String dataZatrudnieniaNauczyciela = DataZatrudnienaN.Text;
             nauczyciele.Add(new nauczyciel() { dataZatrudnienia = dataZatrudnieniaNauczyciela, nauczanePrzedmioty = nauczanePrzedmiotyNauczyciela, wychowawstwo = wychowawstwoNauczyciela, plec = plecNauczyciela, imie = imieNauczyciela, drugieImie = drugieImieNauczyciela, nazwisko = nazwiskoNauczyciela, nazwiskoPanienskie = nazwiskoPanieniskieNauczyciela, imionaRodzicow = imionaRodzicowNauczyciela, dataUrodzenia = dataUrodzeniaNauczyciela, pesel = peselNauczyciela }); 
 
@@ -195,7 +250,7 @@ namespace Sekretariat
             imonaRodzicowN.Text = " ";
             peselN.Text = " ";
             WychowawstwoN.Text = " ";
-            przedmiotyNauczania.Text = " ";
+
 
         }
         

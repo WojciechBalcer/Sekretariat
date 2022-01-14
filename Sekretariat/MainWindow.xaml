@@ -18,18 +18,18 @@
 
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="25"></RowDefinition>
@@ -54,9 +54,9 @@
                         <Label Grid.Column="9">Płeć</Label>
                         <ComboBox Grid.Row="2" Grid.Column="9" Name="plecU"></ComboBox>
                         <Label Grid.Column="10">Przynależność do klasy</Label>
-                        <TextBox Grid.Row="2" Grid.Column="10" Name="doKlasyU"></TextBox>
+                        <ComboBox Grid.Row="2" Grid.Column="10" Name="doKlasyU"></ComboBox>
                         <Label Grid.Column="11">Przynoależność do grup</Label>
-                        <TextBox Grid.Row="2" Grid.Column="11" Name="doGrupyU"></TextBox>
+                        <ComboBox Grid.Row="2" Grid.Column="11" Name="doGrupyU"></ComboBox>
                         <Button Grid.Column="13" Grid.Row="1" Click="dodajUcznia">dodaj ucznia</Button>
                         <Button Grid.Column="12" Grid.Row="1" Click="wyczyscUcznia">Wyczyść</Button>
                     </Grid>
@@ -71,26 +71,26 @@
 
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="25"></RowDefinition>
                             <RowDefinition Height="50"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <Label Grid.Column="1">Imię</Label>
+                        <Label Grid.Column="1" >Imię</Label>
                         <TextBox Grid.Row="2" Grid.Column="1" Name="imieN"></TextBox>
                         <Label Grid.Column="2">Drugie imię</Label>
                         <TextBox Grid.Row="2" Grid.Column="2" Name="drugieImieN"></TextBox>
@@ -109,11 +109,11 @@
                         <Label Grid.Column="9">Płeć</Label>
                         <ComboBox Grid.Row="2" Grid.Column="9" Name="plecN"></ComboBox>
                         <Label Grid.Column="10">Wychowawstwo</Label>
-                        <TextBox Grid.Row="2" Grid.Column="10" Name="WychowawstwoN"></TextBox>
+                        <ComboBox Grid.Row="2" Grid.Column="10" Name="WychowawstwoN"></ComboBox>
                         <Label Grid.Column="11">Przedmioty Nauczania</Label>
-                        <TextBox Grid.Row="2" Grid.Column="11" Name="przedmiotyNauczania"></TextBox>
+                        <ListBox Grid.Row="2" Grid.Column="11" Name="przedmiotyNauczania"></ListBox>
                         <Label Grid.Column="12">Klasy uczone</Label>
-                        <TextBox Grid.Row="2" Grid.Column="12" Name="klasyUczoneN"></TextBox>
+                        <ComboBox Grid.Row="2" Grid.Column="12" Name="klasyUczoneN"></ComboBox>
                         <Label Grid.Column="13">Data zatrudnienia</Label>
                         <DatePicker Grid.Row="2" Grid.Column="13" Name="DataZatrudnienaN" ></DatePicker>
                         <Button Grid.Column="15" Grid.Row="1" Click="dodajNauczyciela">dodaj nauczyciela</Button>
@@ -129,19 +129,19 @@
 
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="25"></RowDefinition>
@@ -166,7 +166,7 @@
                         <Label Grid.Column="9">Płeć</Label>
                         <ComboBox Grid.Row="2" Grid.Column="9" Name="plecP"></ComboBox>
                         <Label Grid.Column="10">Informacje o etacie</Label>
-                        <TextBox Grid.Row="2" Grid.Column="10" Name="etat"></TextBox>
+                        <ComboBox Grid.Row="2" Grid.Column="10" Name="etat"></ComboBox>
                         <Label Grid.Column="11">Opis stanowiska</Label>
                         <TextBox Grid.Row="2" Grid.Column="11" Name="Opis"></TextBox>
                         <Label Grid.Column="12">Data zatrudnienia</Label>
