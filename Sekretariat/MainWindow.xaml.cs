@@ -25,6 +25,9 @@ namespace Sekretariat
         int licznikNauczycieli = 0;
         int licznikPracownikow = 0;
 
+        
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -32,9 +35,29 @@ namespace Sekretariat
             dataUrodzeniaN.DisplayDateStart = System.DateTime.Today.AddYears(-65);
             dataUrodzeniaP.DisplayDateStart = System.DateTime.Today.AddYears(-65);
             dataUrodzeniaU.DisplayDateStart = System.DateTime.Today.AddYears(-25);
+            dataUrodzeniaU.DisplayDate = System.DateTime.Today;
+            dataUrodzeniaN.DisplayDate = System.DateTime.Today;
+            dataUrodzeniaP.DisplayDate = System.DateTime.Today;
             dataUrodzeniaN.DisplayDateEnd = System.DateTime.Today.AddYears(-30);
             dataUrodzeniaU.DisplayDateEnd = System.DateTime.Today.AddYears(-14);
             dataUrodzeniaP.DisplayDateEnd = System.DateTime.Today.AddYears(-25);
+
+            DataZatrudnienaN.DisplayDate = System.DateTime.Today;            
+            DataZatrudnienaN.DisplayDateStart = System.DateTime.Today.AddYears(-65);
+
+            DataZatrudnienaP.DisplayDate = System.DateTime.Today;
+            DataZatrudnienaP.DisplayDateStart = System.DateTime.Today.AddYears(-65);
+
+            plecN.Items.Add("męższczyzna");
+            plecN.Items.Add("kobieta");
+
+            plecU.Items.Add("męższczyzna");
+            plecU.Items.Add("kobieta");
+
+            plecP.Items.Add("męższczyzna");
+            plecP.Items.Add("kobieta");
+
+            
 
             peselN.MaxLength = 11;
             peselP.MaxLength = 11;
@@ -70,10 +93,10 @@ namespace Sekretariat
             public string nazwisko { get; set; }
             public string nazwiskoPanienskie { get; set; }
             public string imionaRodzicow { get; set; }
-            public DateTime dataUrodzenia { get; set; }
+            public String dataUrodzenia { get; set; }
             public string pesel { get; set; }
             public string zdjecie { get; set; }
-            public string plec { get; set; }
+            public String plec { get; set; }
             public string klasa { get; set; }
             public string grupa { get; set; }
         }
@@ -84,13 +107,13 @@ namespace Sekretariat
             public string nazwisko { get; set; }
             public string nazwiskoPanienskie { get; set; }
             public string imionaRodzicow { get; set; }
-            public DateTime dataUrodzenia { get; set; }
+            public String dataUrodzenia { get; set; }
             public string pesel { get; set; }
             public string zdjecie { get; set; }
-            public string plec { get; set; }
+            public String plec { get; set; }
             public string wychowawstwo { get; set; }
             public string nauczanePrzedmioty { get; set; }
-            public DateTime dataZatrudnienia { get; set; }
+            public String dataZatrudnienia { get; set; }
         }
         public class pracownik
         {
@@ -99,13 +122,13 @@ namespace Sekretariat
             public string nazwisko { get; set; }
             public string nazwiskoPanienskie { get; set; }
             public string imionaRodzicow { get; set; }
-            public DateTime dataUrodzenia { get; set; }
+            public String dataUrodzenia { get; set; }
             public string pesel { get; set; }
             public string zdjecie { get; set; }
-            public string plec { get; set; }
+            public String plec { get; set; }
             public string etat { get; set; }
             public string opis { get; set; }
-            public DateTime dataZatrudnienia { get; set; }
+            public String dataZatrudnienia { get; set; }
         }
         
 
@@ -119,13 +142,13 @@ namespace Sekretariat
             String nazwiskoUcznia = nazwiskoU.Text;
             String nazwiskoPanieniskieUcznia = nazwiskoPanienskieU.Text;
             String imionaRodzicowUcznia = imonaRodzicowU.Text;
-            DateTime dataUrodzeniaUcznia = dataUrodzeniaU.SelectedDate.Value;
+            String dataUrodzeniaUcznia = dataUrodzeniaU.Text;
             String peselUcznia = peselU.Text;
             //BitmapImage zdjecieUcznia = zdjecieU.Text;
             String plecUcznia = plecU.Text;
             String klasaUcznia = doKlasyU.Text;
             String grupaUcznia = doGrupyU.Text;
-            uczniowie.Add(new uczen() { imie = imieUcznia, drugieImie = drugieImieUcznia, nazwisko = nazwiskoUcznia, nazwiskoPanienskie = nazwiskoPanieniskieUcznia, imionaRodzicow = imionaRodzicowUcznia, dataUrodzenia = dataUrodzeniaUcznia, pesel = peselUcznia, plec = plecUcznia, klasa = klasaUcznia, grupa = grupaUcznia }) ;
+            uczniowie.Add(new uczen() { imie = imieUcznia, drugieImie = drugieImieUcznia, nazwisko = nazwiskoUcznia, nazwiskoPanienskie = nazwiskoPanieniskieUcznia, imionaRodzicow = imionaRodzicowUcznia, dataUrodzenia = dataUrodzeniaUcznia, pesel = peselUcznia, plec = plecUcznia , klasa = klasaUcznia, grupa = grupaUcznia }) ;
 
             MessageBox.Show("Dodano ucznia" + licznikUczniow);
         }
@@ -137,7 +160,6 @@ namespace Sekretariat
             nazwiskoPanienskieU.Text = " ";
             imonaRodzicowU.Text = " ";
             peselU.Text = " ";
-            plecU.Text = " ";
             doKlasyU.Text = " ";
             doGrupyU.Text = " ";
         }
@@ -152,13 +174,13 @@ namespace Sekretariat
             String nazwiskoNauczyciela = nazwiskoN.Text;
             String nazwiskoPanieniskieNauczyciela = nazwiskoPanienskieN.Text;
             String imionaRodzicowNauczyciela = imonaRodzicowN.Text;
-            DateTime dataUrodzeniaNauczyciela = dataUrodzeniaN.SelectedDate.Value;
+            String dataUrodzeniaNauczyciela = dataUrodzeniaN.Text;
             String peselNauczyciela = peselN.Text;
             String zdjecieNauczyciela = zdjecieN.Text;
             String plecNauczyciela = plecN.Text;
             String wychowawstwoNauczyciela = WychowawstwoN.Text;
             String nauczanePrzedmiotyNauczyciela = przedmiotyNauczania.Text;
-            DateTime dataZatrudnieniaNauczyciela = DataZatrudnienaN.SelectedDate.Value;
+            String dataZatrudnieniaNauczyciela = DataZatrudnienaN.Text;
             nauczyciele.Add(new nauczyciel() { dataZatrudnienia = dataZatrudnieniaNauczyciela, nauczanePrzedmioty = nauczanePrzedmiotyNauczyciela, wychowawstwo = wychowawstwoNauczyciela, plec = plecNauczyciela, imie = imieNauczyciela, drugieImie = drugieImieNauczyciela, nazwisko = nazwiskoNauczyciela, nazwiskoPanienskie = nazwiskoPanieniskieNauczyciela, imionaRodzicow = imionaRodzicowNauczyciela, dataUrodzenia = dataUrodzeniaNauczyciela, pesel = peselNauczyciela }); 
 
 
@@ -172,7 +194,6 @@ namespace Sekretariat
             nazwiskoPanienskieN.Text = " ";
             imonaRodzicowN.Text = " ";
             peselN.Text = " ";
-            plecN.Text = " ";
             WychowawstwoN.Text = " ";
             przedmiotyNauczania.Text = " ";
 
@@ -188,12 +209,12 @@ namespace Sekretariat
             String nazwiskoPracownika = nazwiskoP.Text;
             String nazwiskoPanienskiePracownika = nazwiskoPanienskieP.Text;
             String imonaRodzicowPracownika = imonaRodzicowP.Text;
-            DateTime dataUrodzeniaPracownika = dataUrodzeniaP.SelectedDate.Value;
+            String dataUrodzeniaPracownika = dataUrodzeniaP.Text;
             String peselPracownika = peselP.Text;
             String plecPracownika = plecP.Text;
             String etatPracownika = etat.Text;
             String opisPracownika = Opis.Text;
-            DateTime dataZatrudnieniaPracownika = DataZatrudnienaP.SelectedDate.Value;
+            String dataZatrudnieniaPracownika = DataZatrudnienaP.Text;
             
             pracownicy.Add(new pracownik() { opis = opisPracownika, etat = etatPracownika, dataZatrudnienia = dataZatrudnieniaPracownika, plec = plecPracownika, imie = imiePracownika, drugieImie = drugieImiePracownika, nazwisko = nazwiskoPracownika, nazwiskoPanienskie = nazwiskoPanienskiePracownika, imionaRodzicow = imonaRodzicowPracownika, dataUrodzenia = dataUrodzeniaPracownika, pesel = peselPracownika });
 
@@ -209,7 +230,6 @@ namespace Sekretariat
             nazwiskoPanienskieP.Text = " ";
             imonaRodzicowP.Text = " ";
             peselP.Text = " ";
-            plecP.Text = " ";
             etat.Text = " ";
             Opis.Text = " ";
         }

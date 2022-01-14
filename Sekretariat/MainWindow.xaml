@@ -52,7 +52,7 @@
                         <Label Grid.Column="8">Zdjęcie</Label>
                         <TextBox Grid.Row="2" Grid.Column="8" Name="zdjecieU"></TextBox>
                         <Label Grid.Column="9">Płeć</Label>
-                        <TextBox Grid.Row="2" Grid.Column="9" Name="plecU"></TextBox>
+                        <ComboBox Grid.Row="2" Grid.Column="9" Name="plecU"></ComboBox>
                         <Label Grid.Column="10">Przynależność do klasy</Label>
                         <TextBox Grid.Row="2" Grid.Column="10" Name="doKlasyU"></TextBox>
                         <Label Grid.Column="11">Przynoależność do grup</Label>
@@ -107,7 +107,7 @@
                         <Label Grid.Column="8">Zdjęcie</Label>
                         <TextBox Grid.Row="2" Grid.Column="8" Name="zdjecieN"></TextBox>
                         <Label Grid.Column="9">Płeć</Label>
-                        <TextBox Grid.Row="2" Grid.Column="9" Name="plecN"></TextBox>
+                        <ComboBox Grid.Row="2" Grid.Column="9" Name="plecN"></ComboBox>
                         <Label Grid.Column="10">Wychowawstwo</Label>
                         <TextBox Grid.Row="2" Grid.Column="10" Name="WychowawstwoN"></TextBox>
                         <Label Grid.Column="11">Przedmioty Nauczania</Label>
@@ -164,7 +164,7 @@
                         <Label Grid.Column="8">Zdjęcie</Label>
                         <TextBox Grid.Row="2" Grid.Column="8" Name="zdjecieP"></TextBox>
                         <Label Grid.Column="9">Płeć</Label>
-                        <TextBox Grid.Row="2" Grid.Column="9" Name="plecP"></TextBox>
+                        <ComboBox Grid.Row="2" Grid.Column="9" Name="plecP"></ComboBox>
                         <Label Grid.Column="10">Informacje o etacie</Label>
                         <TextBox Grid.Row="2" Grid.Column="10" Name="etat"></TextBox>
                         <Label Grid.Column="11">Opis stanowiska</Label>
