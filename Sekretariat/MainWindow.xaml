@@ -33,7 +33,7 @@
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="25"></RowDefinition>
-                            <RowDefinition Height="50"></RowDefinition>
+                            <RowDefinition Height="150"></RowDefinition>
                         </Grid.RowDefinitions>
                         <Label Grid.Column="1">Imię</Label>
                         <TextBox Grid.Row="2" Grid.Column="1" Name="imieU"></TextBox>
@@ -88,7 +88,7 @@
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="25"></RowDefinition>
-                            <RowDefinition Height="50"></RowDefinition>
+                            <RowDefinition Height="150"></RowDefinition>
                         </Grid.RowDefinitions>
                         <Label Grid.Column="1" >Imię</Label>
                         <TextBox Grid.Row="2" Grid.Column="1" Name="imieN"></TextBox>
@@ -111,7 +111,7 @@
                         <Label Grid.Column="10">Wychowawstwo</Label>
                         <ComboBox Grid.Row="2" Grid.Column="10" Name="WychowawstwoN"></ComboBox>
                         <Label Grid.Column="11">Przedmioty Nauczania</Label>
-                        <ListBox Grid.Row="2" Grid.Column="11" Name="przedmiotyNauczania"></ListBox>
+                        <ListBox SelectionMode="Multiple" Grid.Row="2" Grid.Column="11" Name="przedmiotyNauczania"></ListBox>
                         <Label Grid.Column="12">Klasy uczone</Label>
                         <ComboBox Grid.Row="2" Grid.Column="12" Name="klasyUczoneN"></ComboBox>
                         <Label Grid.Column="13">Data zatrudnienia</Label>
@@ -145,7 +145,7 @@
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="25"></RowDefinition>
-                            <RowDefinition Height="50"></RowDefinition>
+                            <RowDefinition Height="150"></RowDefinition>
                         </Grid.RowDefinitions>
                         <Label Grid.Column="1">Imię</Label>
                         <TextBox Grid.Row="2" Grid.Column="1" Name="imieP"></TextBox>

@@ -167,8 +167,9 @@ namespace Sekretariat
             public string zdjecie { get; set; }
             public String plec { get; set; }
             public String wychowawstwo { get; set; }
-            public ListBox nauczanePrzedmioty { get; set; }
+            public String nauczanePrzedmioty { get; set; }
             public String dataZatrudnienia { get; set; }
+            
         }
         public class pracownik
         {
@@ -234,8 +235,14 @@ namespace Sekretariat
             String zdjecieNauczyciela = zdjecieN.Text;
             String plecNauczyciela = plecN.Text;
             String wychowawstwoNauczyciela = WychowawstwoN.Text;
-            ListBox nauczanePrzedmiotyNauczyciela = przedmiotyNauczania;
+            String nauczanePrzedmiotyNauczyciela = "";
             String dataZatrudnieniaNauczyciela = DataZatrudnienaN.Text;
+
+            foreach(var Item in przedmiotyNauczania.SelectedItems)
+            {
+                nauczanePrzedmiotyNauczyciela += " " + Item.ToString();
+            }
+
             nauczyciele.Add(new nauczyciel() { dataZatrudnienia = dataZatrudnieniaNauczyciela, nauczanePrzedmioty = nauczanePrzedmiotyNauczyciela, wychowawstwo = wychowawstwoNauczyciela, plec = plecNauczyciela, imie = imieNauczyciela, drugieImie = drugieImieNauczyciela, nazwisko = nazwiskoNauczyciela, nazwiskoPanienskie = nazwiskoPanieniskieNauczyciela, imionaRodzicow = imionaRodzicowNauczyciela, dataUrodzenia = dataUrodzeniaNauczyciela, pesel = peselNauczyciela }); 
 
 
