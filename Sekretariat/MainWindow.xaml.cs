@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,11 +28,15 @@ namespace Sekretariat
         int licznikPracownikow = 0;
 
         
+        
 
 
         public MainWindow()
         {
             InitializeComponent();
+
+
+            
 
             dataUrodzeniaN.DisplayDateStart = System.DateTime.Today.AddYears(-65);
             dataUrodzeniaP.DisplayDateStart = System.DateTime.Today.AddYears(-65);
@@ -239,7 +245,7 @@ namespace Sekretariat
             }
 
             uczniowie.Add(new uczen() { imie = imieUcznia, drugieImie = drugieImieUcznia, nazwisko = nazwiskoUcznia, nazwiskoPanienskie = nazwiskoPanieniskieUcznia, imionaRodzicow = imionaRodzicowUcznia, dataUrodzenia = dataUrodzeniaUcznia, pesel = peselUcznia, plec = plecUcznia , klasa = klasaUcznia, grupa = grupaUcznia }) ;
-
+            
             MessageBox.Show("Dodano ucznia" + licznikUczniow);
         }
         public void wyczyscUcznia(object sender, RoutedEventArgs e)
@@ -330,20 +336,29 @@ namespace Sekretariat
         }
         private void zapisz(object sender, RoutedEventArgs e)
         {
-            Microsoft.Win32.SaveFileDialog dlg = new Microsoft.Win32.SaveFileDialog();
-            dlg.FileName = "Document"; 
-            dlg.DefaultExt = ".txt"; 
-            dlg.Filter = "Text documents (.txt)|*.txt"; 
+            string zapis = "";
 
-            // Show save file dialog box
-            Nullable<bool> result = dlg.ShowDialog();
+            
 
-            // Process save file dialog box results
-            if (result == true)
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Pliki tekstowe (*.txt)|*.txt|Wszystkie pliki (*.*)|*.*";
+            saveFileDialog.FileName = $"zapis.txt";
+            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            if (saveFileDialog.ShowDialog() == true)
             {
-                // Save document
-                string i = "lubie placki";
-                    i = dlg.FileName;
+                
+                    foreach (uczen u in listaUczniow.ItemsSource)
+                        zapis += $"uczen ;{u.imie};{u.drugieImie};{u.nazwisko};{u.nazwiskoPanienskie};{u.pesel};{u.plec};{u.imionaRodzicow};{u.dataUrodzenia};{u.klasa};{u.grupa}\n";
+
+                
+                    foreach (nauczyciel n in listaNauczycieli.ItemsSource)
+                        zapis += $"nauczyciel ;{n.imie};{n.drugieImie};{n.nazwisko};{n.nazwiskoPanienskie};{n.pesel};{n.plec};{n.imionaRodzicow};{n.dataUrodzenia};{n.wychowawstwo};{n.nauczanePrzedmioty};{n.dataZatrudnienia}\n";
+
+                
+                    //foreach (pracownik p in listaPracownikow.ItemsSource)
+                        //zapis += $"pracownik ;{p.imie};{p.drugieImie};{p.nazwisko};{p.nazwiskoPanienskie};{p.pesel};{p.plec};{p.imionaRodzicow};{p.dataUrodzenia};{p.etat};{p.opis};{p.dataZatrudnienia}\n";
+
+                File.WriteAllText(saveFileDialog.FileName, zapis + " ");
             }
         }
     }
